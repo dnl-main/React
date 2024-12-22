@@ -1,10 +1,10 @@
 import React from 'react';
+import './account.css';
 
 const Account = () => {
   return (
     <div className="account">
-      <h2>Account Page</h2>
-      <p>Manage your account information here.</p>
+      <h1>Account</h1>
     </div>
   );
 };
