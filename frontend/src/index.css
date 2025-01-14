@@ -1,4 +1,79 @@
-body {
+/* Base styles */
+html {
+  font-size: 12px; /* Default base font size */
+  box-sizing: border-box;
+  width: 1440px;
+  height: 1024px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
+
+/* Root variables */
+:root {
+  /* Colors */
+  --primary-color: #00889a;
+  --background-color: #f5f6fa;
+  --black-color: #14181f;
+  --white-color: #ffffff;
+
+  --primary-color-opacity-30: rgba(0, 136, 154, 0.3); /* 30% opacity */
+  --background-color-opacity-70: rgba(245, 246, 250, 0.7); /* 70% opacity */
+  --black-color-opacity-20: rgba(20, 24, 31, 0.2); /* 20% opacity */
+  --white-color-opacity-60: rgba(255, 255, 255, 0.6); /* 60% opacity */
+
+  /* Font settings */
+  --font-family: 'Inter', sans-serif;
+  
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+ 
+  /* Font sizes */
+  --font-size-12: 1rem;    /* 12px */
+  --font-size-16: 1.333rem; /* 16px */
+  --font-size-20: 1.667rem; /* 20px */
+  --font-size-24: 2rem;    /* 24px */
+  --font-size-28: 2.333rem; /* 28px */
+  --font-size-32: 2.667rem; /* 32px */
+  --font-size-36: 3rem;    /* 36px */
+  --font-size-40: 3.333rem; /* 40px */
+  --font-size-44: 3.667rem; /* 44px */
+  --font-size-48: 4rem;    /* 48px */
+  --font-size-52: 4.333rem; /* 52px */
+  --font-size-56: 4.667rem; /* 56px */
+  --font-size-60: 5rem;    /* 60px */
+  
+  /* Sizing based on 4-pixel rule */
+  --spacing-unit: 4px;
+}
+
+/* Ensure the design screen size is respected */
+body {
+  font-family: var(--font-family);
+}
+
+/* Example usage of spacing 
+.container {
+  padding: calc(4 * var(--spacing-unit));  16px padding
+  margin: calc(2 * var(--spacing-unit)); 8px margin
+}
+
+Example typography 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+*/

@@ -10,6 +10,9 @@ import Certificate from './admin/certificate/Certificate';
 import Notification from './admin/notification/Notification';
 import Schedule from './admin/schedule/Schedule';
 import Sidebar from './admin/sidebar/Sidebar';
+import Signup from './onboarding/signup/Signup';
+import Registration from './onboarding/register/Registration';
+import Login from './onboarding/login/Login';
 
 
 function App() {
@@ -25,6 +28,10 @@ function App() {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/schedule" element={<Schedule />} />
+
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
     </Router>
   );
