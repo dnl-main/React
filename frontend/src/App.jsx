@@ -13,6 +13,12 @@ import Sidebar from './admin/sidebar/Sidebar';
 import Signup from './onboarding/signup/Signup';
 import Registration from './onboarding/register/Registration';
 import Login from './onboarding/login/Login';
+import AccountUser from './user/account/AccountUser';
+import CertificateUser from './user/certificate/CertificateUser';
+import HomeUser from './user/home/HomeUser';
+import NavbarUser from './user/navbar/NavbarUser';
+import NotificationUser from './user/notification/NotificationUser';
+import SidebarUser from './user/sidebar/SidebarUser';
 
 
 function App() {
@@ -32,6 +38,16 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+
+        <Route path="/accountUser" element={<AccountUser />} />
+        <Route path="/certificateUser" element={<CertificateUser />} />
+        <Route path="/homeUser" element={<HomeUser />} />
+        <Route path="/navbarUser" element={<NavbarUser />} />
+        <Route path="/notificationUser" element={<NotificationUser />} />
+        <Route path="/sidebarUser" element={<SidebarUser />} />
+
+
+
       </Routes>
     </Router>
   );
