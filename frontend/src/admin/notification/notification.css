@@ -1,3 +1,86 @@
-.notification {
-    background-color: blanchedalmond;
+.notification-all {
+    background-color: yellow;
+    height: 1000px;
+    width: 1200px;
+
 }
+    .notification-all-header {
+        background-color: blueviolet;
+
+    }
+    .notification-all-container {
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+        height: 900px;
+        width: 1100px;
+
+    }
+
+        .notification-all-container-left{
+            background-color: red;
+            height: 800px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 100px;
+
+        }
+            .notification-all-container-left-top {
+                background-color: rgb(193, 142, 142);
+                height: 300px;
+                width: 300px;
+                padding: 30px;
+                border: 30px;
+                border-style: solid;
+                border-color: aqua;
+
+            }
+
+                .available_crew-container-top-header {
+                    font-size: var(--font-size-16);
+                    font-weight: var(--font-weight-semibold);
+                }
+
+            .notification-all-container-left-bottom {
+                background-color: rgb(93, 6, 6);
+                height: 300px;
+                width: 300px;
+
+            }
+           
+
+        .notification-all-container-middle{
+            background-color: rgb(170, 255, 0);
+            height: 700px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+
+        }
+            .notification-all-container-middle-top {
+                background-color: rgb(181, 200, 143);
+                height: 300px;
+                width: 300px;
+            }
+
+            .notification-all-container-middle-bottom {
+                background-color: rgb(80, 117, 7);
+                height: 300px;
+                width: 300px;
+
+            }
+
+           
+
+        .notification-all-container-right{
+            background-color: rgb(43, 1, 1);
+            height: 700px;
+            width: 300px;
+
+        }
+
