@@ -68,7 +68,63 @@ const Signup = () => {
         </div>
 
         <div className="signup-right-form">
-
+          <form id="signup-form-id" onSubmit={handleSubmit} >
+            <label>
+              Name:
+              <input
+                type="text"
+                name="signup-right-form-name"
+                id="signup-right-form-name-id"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Email:
+              <input
+                type="email"
+                name="signup-right-form-email"
+                id="signup-right-form-email-id"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Mobile:
+              <input
+                type="text"
+                name="signup-right-form-mobile"
+                id="signup-right-form-mobile-id"
+                value={formData.mobile}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Password:
+              <input
+                type="password"
+                name="signup-right-form-password"
+                id="signup-right-form-password-id"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <br />
+            <button 
+              type="submit" 
+              id="signup-right-form-button-id" 
+              name="lsignup-right-form-button"
+              >Submit
+            </button>
+            <p>{message}</p>
+          </form>
         </div>
 
         <div className="signup-right-terms">
@@ -86,7 +142,13 @@ const Signup = () => {
 
         <div className="signup-right-button">
           <label for="signup-right-button-id">
-            <button type="button" id="signup-right-button-id" name="signup-right-button">Sign Up</button>
+            <button 
+              type="button" 
+              form="signup-form-id"
+              id="signup-right-button-id" 
+              name="signup-right-button">
+              Sign Up
+            </button>
           </label>
         </div>
 
