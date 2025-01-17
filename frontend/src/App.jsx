@@ -23,6 +23,8 @@ import SidebarUser from './user/sidebar/SidebarUser';
 
 function App() {
   return (
+    <>
+    <div className="all">
     <Router>
       <Navbar />
       <Sidebar />
@@ -46,10 +48,10 @@ function App() {
         <Route path="/notificationUser" element={<NotificationUser />} />
         <Route path="/sidebarUser" element={<SidebarUser />} />
 
-
-
       </Routes>
     </Router>
+    </div>
+    </>
   );
 }
 

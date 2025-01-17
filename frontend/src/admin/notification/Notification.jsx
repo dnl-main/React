@@ -4,73 +4,90 @@ import './notification.css';
 const Notification = () => {
   return (
     <div className="notification">
-      <div className="notification-all">
-        <div className="notification-all-header">
-          <p>Dashboard</p>
+      <div className="notification-container">
+        <div className="notification-header">
+          <img src="" className="" alt="notification icon" />
+          <p className="notification-header-text">Notifications</p>
         </div>
-        <div className="notification-all-container">
-          <div className="notification-all-container-left">
-            <div className="notification-all-container-left-top">
-              <div className="available_crew-container">
-                <div className="available_crew-container-top">
-                  <p className="available_crew-container-top-header">Available Crew</p>
-                  <img src="" className="" alt="availability icon" />
-                  <img src="" className="" alt="back button" />
-                </div>
-                <div className="available_crew-container-middle">
-                  <p className="available_crew-container-middle-indicator-1">25</p>
-                  <p className="available_crew-container-middle-indicator-2">21 Complete</p>
-                  
-                </div>
-                <div className="available_crew-container-bottom">
-                  <p>Job title</p>
-                  <div className="available_crew-container-bottom-job_title-container">
-                    <div className="available_crew-container-bottom-job_title-container-1">
-                      <img src="" className="" alt="job title icon" />
-                      <p className="available_crew-container-bottom-job_title-container-1-text">Trainee 4Th Engineer</p>
-                    </div>
-                    <div className="available_crew-container-bottom-job_title-container-2">
-                      <img src="" className="" alt="job title icon" />
-                      <p className="available_crew-container-bottom-job_title-container-2-text">Chief Engineer</p>
-                    </div>
-                    <div className="available_crew-container-bottom-job_title-container-3">
-                      <img src="" className="" alt="job title icon" />
-                      <p className="available_crew-container-bottom-job_title-container-3-text">More</p>
-                    </div>
+        <div className="notification-tabs">
+          <div className="notification-tabs-all">
+            <img src="" className="" alt="all icon" />
+            <p className="notification-tabs-all-text">All</p>         
+          </div>
+          <div className="notification-tabs-rescheduled">
+            <img src="" className="" alt="rescheduled icon" />
+            <p className="notification-tabs-rescheduled-text">Rescheduled</p>
+          </div>
+          <div className="notification-tabs-canceled">
+            <img src="" className="" alt="canceled icon" />
+            <p className="notification-tabs-canceled-text">Canceled</p>
+          </div>
+          <div className="notification-tabs-uploaded">
+            <img src="" className="" alt="uploaded icon" />
+            <p className="notification-tabs-uploaded-text">Uploaded</p>
+          </div>         
+        </div>
+         
+        <p className="notification-recent">Recent</p>
+        <div className="notification-card">
 
-                  </div>
-                  
-                  
-                </div>
-                
+          <div className="notification-card-indicator">
+
+          </div>
+
+          <div className="notification-card-details">
+            <div className="notification-card-details-left">    
+              <img src="" className="" alt="profile icon" />
+            </div>
+            <div className="notification-card-details-right">
+              <div className="notification-card-details-right-top">
+                <p className="notification-card-details-right-top-name">John Doe</p>
+                <p className="notification-card-details-right-top-time">4 hours ago</p>
+                <p className="notification-card-details-right-top-position">Fleet Crew Manager</p>
               </div>
-              
-            </div>
-            
-            <div className="notification-all-container-left-bottom">
-              <p>left bottom</p>
+              <div className="notification-card-details-right-middle">
+                <p className="notification-card-details-right-middle-description">Rescheduled an appointment for</p>
+                <p className="notification-card-details-right-middle-name">Juan Dela R. Cruz</p>
+              </div>
+              <div className="notification-card-details-right-bottom">
+                <div className="notification-card-details-right-bottom-left">
+                  <img src="" className="" alt="calendar icon" />
+                  <div className="notification-card-details-right-bottom-left-text">
+                    <p className="notification-card-details-right-bottom-left-text-day">Monday</p>
+                    <p className="notification-card-details-right-bottom-left-text-date">DEC - 24 - 2024</p>
+                  </div>
+                </div>
+                <div className="notification-card-details-right-bottom-middle">
+                  <img src="" className="" alt="timer icon" />
+                  <div className="notification-card-details-right-bottom-middle-text">
+                    <p className="notification-card-details-right-bottom-middle-text-starts">Starts at</p>
+                    <p className="notification-card-details-right-bottom-middle-text-time">11:30 AM</p>
+                  </div>
+                </div>
+                <div className="notification-card-details-right-bottom-right">
+                  <img src="" className="" alt="timer icon" />
+                  <div className="notification-card-details-right-bottom-right-text">
+                    <p className="notification-card-details-right-bottom-right-text-starts">End at</p>
+                    <p className="notification-card-details-right-bottom-right-text-time">12:00 PM</p>
+                  </div>           
+                </div>
+              </div>
             </div>
           </div>
 
+          <div className="notification-card-class">
+            <img src="" className="" alt="class icon" />
+            <p className="notification-card-class-text">Trainee 4th Engineer</p>
+          </div>
 
-
-          <div className="notification-all-container-middle">
-            <div className="notification-all-container-middle-top">
-              <h1>middle top</h1>
-
-            </div>
-            <div className="notification-all-container-middle-bottom">
-            <h1>middle middle bottom</h1>
-
+          <div className="notification-card-button">
+            <div className="notification-card-button-bg">
+              <img src="" className="" alt="edit icon" />
             </div>
           </div>
-          <div className="notification-all-container-right">
-            <h1>right</h1>
 
-          </div>
         </div>
       </div>
-      
     </div>
   );
 };

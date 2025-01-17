@@ -143,7 +143,7 @@ const Home = () => {
     
     <div className="scheduled_appointment-all">
       <div className="scheduled_appointment-header">
-      <img src="" className="aica" alt="Coming TOday Icon" />
+      <img src="" className="aica" alt="Coming Today Icon" />
       <p className="scheduled_appointment-header-text">Coming Today</p>
       </div>
 

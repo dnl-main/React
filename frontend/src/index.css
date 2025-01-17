@@ -1,5 +1,5 @@
 /* Base styles */
-html {
+.all {
   font-size: 12px; /* Default base font size */
   box-sizing: border-box;
   width: 1440px;
@@ -60,6 +60,8 @@ html {
 body {
   font-family: var(--font-family);
 }
+
+
 
 /* Example usage of spacing 
 .container {

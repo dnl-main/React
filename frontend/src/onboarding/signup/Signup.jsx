@@ -28,7 +28,7 @@ const Signup = () => {
     try {
       // Send the form data to the PHP API using axios
       const response = await axios.post(
-        'http://localhost/Concorde/backend/signup.php', 
+        'http://localhost/Concorde/backend/index.php', 
         formData // Send all form data
       );
 
@@ -51,66 +51,52 @@ const Signup = () => {
   const isFriendmarEmail = formData.email.endsWith('@friendmar.com.ph');
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Mobile:
-        <input
-          type="text"
-          name="mobile"
-          value={formData.mobile}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <br />
-      <button type="submit">Submit</button>
-      <p>{message}</p>
-    </form>
-
-      {/* Conditionally render the Link based on email check 
-      {formData.email && (
-        <div>
-          {isFriendmarEmail ? (
-            <Link to="/login">Go to Login</Link>
-          ) : (
-            <Link to="/registration">Go to Registration</Link>
-          )}
+    <div className="signup">
+      <div className="signup-left">
+        <div className="signup-left-top">
+          <img src="" className="" alt="Concorde logo" />
         </div>
-      )}*/}
+        <div className="signup-left-bottom">
+          <img src="" className="" alt="big picture" />
+        </div>
+      </div>
+
+      <div className="signup-right">
+        <div className="signup-right-header">
+          <p className="signup-right-header-sub">Start for free</p>
+          <p className="signup-right-header-main">Create an account</p>
+        </div>
+
+        <div className="signup-right-form">
+
+        </div>
+
+        <div className="signup-right-terms">
+          <div className="signup-right-terms-checkbox">
+            <input type="checkbox" id="signup-right-terms-checkbox-id" name="signup-right-terms-checkbox" required />
+            <label for="signup-right-terms-checkbox-id">By signing up I agree with</label>
+          </div>
+          <div className="signup-right-terms-content">
+            <label for="signup-right-terms-content-id">
+              <button type="button" id="signup-right-terms-content-id" name="signup-right-terms-content">Terms and Conditions</button>
+            </label>
+          </div>
+          <p className="signup-right-terms-asterisk">*</p>
+        </div>
+
+        <div className="signup-right-button">
+          <label for="signup-right-button-id">
+            <button type="button" id="signup-right-button-id" name="signup-right-button">Sign Up</button>
+          </label>
+        </div>
+
+        <div className="signup-right-login">
+          <p className="signup-right-login-text">Don't have an account yet?</p>
+          <label for="signup-right-login-button-id">
+            <button type="button" id="signup-right-login-button-id" name="signup-right-login-button">Sign up</button>
+          </label>
+        </div>
+      </div>
     </div>
   );
 };
