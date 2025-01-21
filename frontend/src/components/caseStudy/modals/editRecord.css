@@ -1,0 +1,71 @@
+/* Modal Overlay */
+.edit-record-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Container */
+  .edit-record-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .edit-record-title {
+    text-align: center;
+    font-size: var(--font-size-16);
+    margin-bottom: 20px;
+  }
+  
+  /* Label Styling */
+  .edit-record-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: var(--font-size-12);
+  }
+  
+  /* Input and Textarea */
+  .edit-record-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: var(--border-width-1) solid var(--border-color-20);
+    border-radius: 8px;
+  }
+  
+  /* Button Container */
+  .edit-record-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Buttons */
+  .case-hero-buttons-submit {
+    padding: 0 16px;
+    width: 48%;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+    border-radius: 12px;
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .case-hero-buttons-submit:hover {
+    background-color: var(--primary-color-opacity-60);
+    color: var(--white-color);
+  }
+  

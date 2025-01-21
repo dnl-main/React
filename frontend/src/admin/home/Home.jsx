@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <div className="home">
 
-
     <div className="dashboard-all">
       <div className="dashboard-header">
         <img src="" className="aica" alt="Dashdboard" />

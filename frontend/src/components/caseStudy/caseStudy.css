@@ -1,0 +1,262 @@
+button {
+  cursor: pointer;
+  border: none; 
+  background: none; 
+  font-family: inherit;
+}
+
+
+.case{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 1024px;
+	background-color: var(--background-color);
+
+	font-family: inherit;
+  line-height: normal;   
+	
+
+}
+  .case-hero{
+		display: flex;
+		flex-direction: column;
+		background-color: var(--white-color);
+		height: 340px;
+		width: 80%;
+		padding: 52px;
+		border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+		border-radius: 20px;
+      
+  }
+    .case-hero-heading{
+			font-size: var(--font-size-44);
+			font-weight: var(--font-weight-semibold);
+            
+    }
+    .case-hero-buttons{
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
+			height: 100%;
+			width: 100%;
+        
+    }
+						
+			.case-hero-buttons-upload::file-selector-button {
+				padding: 0 16px;
+				margin-left: 20px;
+				width: 180px;
+				height: 40px;
+				cursor: pointer;
+				background-color: var(--white-color);
+				color: var(--primary-color);
+				border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+				border-radius: 12px;
+				font-size: var(--font-size-12);
+				font-weight: var(--font-weight-semibold);
+			}
+
+				.case-hero-buttons-upload::file-selector-button:hover {
+					background-color: var(--primary-color-opacity-60);
+					color: var(--white-color);
+				}
+
+			.case-hero-buttons-submit {
+				padding: 0 16px;
+				width: 180px;
+				height: 40px; 
+				cursor: pointer; 
+				background-color: var(--primary-color);
+				color: var(--white-color); 
+				border: var(--border-width-2) var(--border-style-solid) var(--border-color-20); 
+				border-radius: 12px; 
+				font-size: var(--font-size-12);
+				font-weight: var(--font-weight-semibold);
+			}
+
+				.case-hero-buttons-submit:hover {
+					background-color: var(--primary-color-opacity-60); 
+					color: var(--white-color); 
+				}
+
+  .case-actions{
+		display: flex;
+		column-gap: 24px;
+		margin-top: 24px;
+
+		height: 160px;
+		width: 80%;
+  }
+    .case-actions-add{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background-color: var(--white-color);
+			row-gap: 12px;
+			height: 160px;
+			width: 32%;
+			border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+			border-radius: 20px;
+			
+    }
+			.case-actions-add-img{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 68px;
+				height: 68px;
+				background-color: var(--background-color);
+				border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+				border-radius: 100px;
+			}
+
+			.open-add-record {
+				color: var(--primary-color);
+				font-size: var(--font-size-20);
+				font-weight: var(--font-weight-semibold);
+			}
+
+		.case-actions-edit{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background-color: var(--white-color);
+			row-gap: 12px;
+			height: 160px;
+			width: 32%;
+			border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+			border-radius: 20px;
+		}
+			.case-actions-edit-img{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 68px;
+				width: 68px;
+				background-color: var(--background-color);
+				border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+				border-radius: 100px;
+			}
+
+			.open-edit-record {
+				color: var(--primary-color);
+				font-size: var(--font-size-20);
+				font-weight: var(--font-weight-semibold);
+			}
+
+		.case-actions-delete{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			row-gap: 12px;
+			background-color: var(--white-color);
+			height: 160px;
+			width: 32%;
+			border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+			border-radius: 20px;
+		}
+
+			.case-actions-delete-img{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 68px;
+				width: 68px;
+				background-color: var(--background-color);
+				border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+				border-radius: 100px;
+			}
+
+			.open-delete-record {
+				color: var(--primary-color);
+				font-size: var(--font-size-20);
+				font-weight: var(--font-weight-semibold);
+			}
+
+
+  .case-records{
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		height:max-content;
+		margin-top: 80px;
+		row-gap: 24px;
+
+
+  }
+		.case-records-header{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+		}
+			.case-records-header-heading{
+				display: flex;
+				align-items: center;
+				column-gap: 12px;
+
+			}
+				.case-records-header-heading-text{
+					font-size: var(--font-size-20);
+					font-weight: var(--font-weight-semibold);
+
+				}
+			/* Styling the delete-all-record button */
+				.delete-all-record {
+					padding: 0 16px; /* Horizontal padding */
+					width: 180px; /* Button width */
+					height: 40px; /* Button height */
+					cursor: pointer; /* Pointer cursor */
+					background-color: var(--white-color); /* Primary button color */
+					color: var(--red-indicator); /* White text color */
+					border: var(--border-width-2) var(--border-style-solid) var(--red-indicator-opacity-30); /* Border styling */
+					border-radius: 12px; /* Rounded corners */
+					font-size: var(--font-size-12); /* Font size */
+					font-weight: var(--font-weight-semibold); /* Font weight */
+				}
+
+					/* Hover effect for the delete-all-record button */
+					.delete-all-record:hover {
+						background-color: var(--red-indicator-opacity-30); /* Slightly faded primary color */
+						color: var(--background-color); /* Keep text color white */
+					}
+
+
+		.case-records-table{
+			background-color: var(--white-color);
+			display: table;
+			margin: 0 auto; /* Center the table horizontally */
+			width: 100%; /* Make the table responsive (expand to available width) */
+			border-collapse: collapse;
+			border-radius: 16px;
+			border-spacing: 0; 
+
+		}
+			.case-records-table-data{
+				width: 100%;
+
+			}
+				.case-records-table-data-header{
+					display: table-row;
+
+				}
+				.case-records-table-data-row{
+					display: table-row;
+
+				}
+					.case-records-table-data-header th,
+					.case-records-table-data-row td {
+						display: table-cell;
+						text-align: left; 
+						padding: 10px 15px; 
+						border-bottom: var(--border-width-2) var(--border-style-solid) var(--background-color); /* Optional: Add a light border for row separation */
+					}
+
+					.case-records-table-data-row:last-child td {
+						border-bottom: none;
+					}

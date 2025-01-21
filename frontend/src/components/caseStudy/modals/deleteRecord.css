@@ -1,0 +1,85 @@
+/* Modal overlay for the semi-transparent background */
+.delete-record-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal container */
+  .delete-record-modal {
+    background-color: var(--white-color); /* White modal background */
+    width: 500px; /* Fixed width for the modal */
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between elements */
+  }
+  
+  /* Modal title */
+  .delete-record-title {
+    font-size: var(--font-size-20); /* Dynamic font size variable */
+    font-weight: var(--font-weight-bold); /* Bold font */
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  /* Form labels */
+  .delete-record-label {
+    font-size: var(--font-size-14); /* Adjust font size */
+    font-weight: var(--font-weight-regular); /* Regular weight */
+    margin-bottom: 4px;
+    display: block; /* Ensure each label is on its own line */
+  }
+  
+  /* Form input */
+  .delete-record-input {
+    width: 100%; /* Full width input */
+    padding: 8px 12px; /* Comfortable spacing inside input */
+    border: var(--border-width-2) var(--border-style-solid) var(--border-color-20); /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: var(--font-size-14); /* Match the label font size */
+    font-family: inherit; /* Inherit font family */
+    outline: none; /* Remove default outline */
+  }
+  
+  .delete-record-input:focus {
+    border-color: var(--primary-color); /* Highlight border on focus */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on focus */
+  }
+  
+  /* Buttons container */
+  .delete-record-buttons {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 16px;
+  }
+  
+  /* Buttons inherit the case-hero-buttons-submit styles */
+  .case-hero-buttons-submit {
+    padding: 0 16px;
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
+    border-radius: 12px;
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-semibold);
+    transition: background-color 0.3s ease;
+  }
+  
+  .case-hero-buttons-submit:hover {
+    background-color: var(--primary-color-opacity-60);
+    color: var(--white-color);
+  }
+  

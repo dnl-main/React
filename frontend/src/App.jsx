@@ -1,7 +1,9 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from './admin/navbar/Navbar'
+// import { Navbar } from './admin/navbar/Navbar'
+// import Sidebar from './admin/sidebar/Sidebar';
+
 import Home from './admin/home/Home' ;
 import Availability from './admin/availability/Availability';
 import Account from './admin/account/account';
@@ -9,7 +11,6 @@ import Calendar from './admin/calendar/Calendar';
 import Certificate from './admin/certificate/Certificate';
 import Notification from './admin/notification/Notification';
 import Schedule from './admin/schedule/Schedule';
-import Sidebar from './admin/sidebar/Sidebar';
 import Signup from './onboarding/signup/Signup';
 import Registration from './onboarding/register/Registration';
 import Login from './onboarding/login/Login';
@@ -20,14 +21,16 @@ import NavbarUser from './user/navbar/NavbarUser';
 import NotificationUser from './user/notification/NotificationUser';
 import SidebarUser from './user/sidebar/SidebarUser';
 
+import CaseStudy from './components/caseStudy/CaseStudy';
+import Testt from './components/Testt';
 
 function App() {
   return (
     <>
     <div className="all">
     <Router>
-      <Navbar />
-      <Sidebar />
+      {/* <Navbar />
+      <Sidebar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/account" element={<Account />} />
@@ -47,6 +50,11 @@ function App() {
         <Route path="/navbarUser" element={<NavbarUser />} />
         <Route path="/notificationUser" element={<NotificationUser />} />
         <Route path="/sidebarUser" element={<SidebarUser />} />
+
+        <Route path="/caseStudy" element={<CaseStudy />} />
+        <Route path="/testt" element={<Testt />} />
+
+
 
       </Routes>
     </Router>

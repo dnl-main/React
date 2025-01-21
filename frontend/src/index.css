@@ -20,10 +20,23 @@
   --black-color: #14181f;
   --white-color: #ffffff;
 
-  --primary-color-opacity-30: rgba(0, 136, 154, 0.3); /* 30% opacity */
-  --background-color-opacity-70: rgba(245, 246, 250, 0.7); /* 70% opacity */
-  --black-color-opacity-20: rgba(20, 24, 31, 0.2); /* 20% opacity */
-  --white-color-opacity-60: rgba(255, 255, 255, 0.6); /* 60% opacity */
+  --red-indicator: #fa6464;
+  --green-indicator: #36c081;
+  --yellow-indicator: #ffdc6c;
+  --blue-indicator: #4c79d3;
+  
+
+
+  --primary-color-opacity-30: rgba(0, 136, 154, 0.3);
+  --primary-color-opacity-60: rgba(0, 136, 154, 0.6); 
+  --background-color-opacity-70: rgba(245, 246, 250, 0.7); 
+  --black-color-opacity-20: rgba(20, 24, 31, 0.2); 
+  --white-color-opacity-60: rgba(255, 255, 255, 0.6); 
+
+  --red-indicator-opacity-30: rgba(250, 100, 100, 0.3);
+  --green-indicator-opacity-30: rgba(54, 192, 129, 0.3);
+  --yellow-indicator-opacity-30: rgba(255, 220, 108, 0.3); 
+  --blue-indicator-opacity-30: rgba(76, 121, 211, 0.3); 
 
   /* Font settings */
   --font-family: 'Inter', sans-serif;
@@ -38,22 +51,32 @@
   --font-weight-black: 900;
  
   /* Font sizes */
-  --font-size-12: 1rem;    /* 12px */
-  --font-size-16: 1.333rem; /* 16px */
-  --font-size-20: 1.667rem; /* 20px */
-  --font-size-24: 2rem;    /* 24px */
-  --font-size-28: 2.333rem; /* 28px */
-  --font-size-32: 2.667rem; /* 32px */
-  --font-size-36: 3rem;    /* 36px */
-  --font-size-40: 3.333rem; /* 40px */
-  --font-size-44: 3.667rem; /* 44px */
-  --font-size-48: 4rem;    /* 48px */
-  --font-size-52: 4.333rem; /* 52px */
-  --font-size-56: 4.667rem; /* 56px */
-  --font-size-60: 5rem;    /* 60px */
+  --font-size-12: 1rem;       /* 12px */
+  --font-size-16: 1.333rem;   /* 16px */
+  --font-size-20: 1.667rem;   /* 20px */
+  --font-size-24: 2rem;       /* 24px */
+  --font-size-28: 2.333rem;   /* 28px */
+  --font-size-32: 2.667rem;   /* 32px */
+  --font-size-36: 3rem;       /* 36px */
+  --font-size-40: 3.333rem;   /* 40px */
+  --font-size-44: 3.667rem;   /* 44px */
+  --font-size-48: 4rem;       /* 48px */
+  --font-size-52: 4.333rem;   /* 52px */
+  --font-size-56: 4.667rem;   /* 56px */
+  --font-size-60: 5rem;       /* 60px */
+  --font-size-64: 5.333rem;   /* 64px */
+  --font-size-68: 5.667rem;   /* 68px */
+  --font-size-72: 6rem;       /* 72px */
+  --font-size-76: 6.333rem;   /* 76px */
+  --font-size-80: 6.667rem;   /* 80px */
+
   
   /* Sizing based on 4-pixel rule */
   --spacing-unit: 4px;
+
+  --border-width-2: 2px;
+  --border-style-solid: solid;
+  --border-color-20: rgba(0, 136, 154, 0.3);
 }
 
 /* Ensure the design screen size is respected */

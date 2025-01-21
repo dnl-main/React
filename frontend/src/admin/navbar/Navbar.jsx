@@ -11,7 +11,7 @@ export const Navbar = () => {
       <div className="right-corner">
         <div className="search">
           <form>
-            <input type="text" placeholder="Search..." aria-label="Search" />
+            <input type="text" name="search-bar" placeholder="Search..." aria-label="Search" />
             <img src="menu.png" alt="Adjust Icon" />
           </form>
         </div>

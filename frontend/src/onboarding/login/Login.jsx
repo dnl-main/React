@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -24,40 +24,70 @@ const Login = () => {
         </div>
 
         <div className="login-right-form">
-          <div class="login-right-form-email">
-            <label for="login-email-id">Email</label>
-            <input type="email" id="login-email-id" name="login-email"  placeholder="e.g. juandelacruz@gmail.com" required />
-          </div>
-          <div class="login-right-form-password">
-            <label for="login-password-id">Password</label>
-            <input type="password" id="login-password-id" name="login-password"  placeholder="Enter your password" required />
-          </div>
+
+
+          {/* login form */}
+          <form id="login-form">
+            <div className="login-right-form-email">
+              <label htmlFor="login-email-id">Email</label>
+              <input 
+                type="email" 
+                id="login-email-id" 
+                name="login-email"  
+                placeholder="e.g. juandelacruz@gmail.com" 
+                required 
+              />
+            </div>
+            <div className="login-right-form-password">
+              <label htmlFor="login-password-id">Password</label>
+              <input 
+                type="password" 
+                id="login-password-id" 
+                name="login-password"  
+                placeholder="Enter your password" 
+                required 
+              />
+            </div>
+          </form>
         </div>
 
         <div className="login-right-options">
           <div className="login-right-options-remember">
-            <input type="checkbox" id="remember-checkbox-id" name="remember-checkbox" required />
-            <label for="remember-checkbox-id">Remember me</label>
+            <input 
+              type="checkbox" 
+              id="remember-checkbox-id" 
+              name="remember-checkbox" 
+              required 
+            />
+            <label htmlFor="remember-checkbox-id">Remember me</label>
           </div>
           
           <div className="login-right-options-forgot">
-            <label for="forgot_password-id">
-              <button type="button" id="forgot_password-id" name="forgot_password">Forgot Password?</button>
-            </label>
+              <button 
+                type="button" 
+                id="forgot_password-id" 
+                name="forgot_password"
+                >
+                Forgot Password?
+                </button>
           </div>
         </div>
 
         <div className="login-right-button">
-          <label for="login-button-id">
-            <button type="button" id="login-button-id" name="login-button">Log in</button>
-          </label>
+            <button 
+              type="button" 
+              id="login-submit-button-id" 
+              name="login-button"
+              >
+              Log in
+              </button>
         </div>
 
         <div className="login-right-signup">
           <p className="login-right-signup-text">Don't have an account yet?</p>
-          <label for="login-right-signup-button-id">
-            <button type="button" id="login-right-signup-button-id" name="login-right-signup-button">Sign up</button>
-          </label>
+            <button id="signup-button">Sign up</button>
+
+
         </div>
       </div>
     </div>

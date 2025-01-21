@@ -68,7 +68,7 @@ const Signup = () => {
         </div>
 
         <div className="signup-right-form">
-          <form id="signup-form-id" onSubmit={handleSubmit} >
+          <form id="signup-submit-button-id" onSubmit={handleSubmit} >
             <label>
               Name:
               <input
@@ -117,12 +117,7 @@ const Signup = () => {
               />
             </label>
             <br />
-            <button 
-              type="submit" 
-              id="signup-right-form-button-id" 
-              name="lsignup-right-form-button"
-              >Submit
-            </button>
+            
             <p>{message}</p>
           </form>
         </div>
@@ -130,10 +125,10 @@ const Signup = () => {
         <div className="signup-right-terms">
           <div className="signup-right-terms-checkbox">
             <input type="checkbox" id="signup-right-terms-checkbox-id" name="signup-right-terms-checkbox" required />
-            <label for="signup-right-terms-checkbox-id">By signing up I agree with</label>
+            <label htmlFor="signup-right-terms-checkbox-id">By signing up I agree with</label>
           </div>
           <div className="signup-right-terms-content">
-            <label for="signup-right-terms-content-id">
+            <label htmlFor="signup-right-terms-content-id">
               <button type="button" id="signup-right-terms-content-id" name="signup-right-terms-content">Terms and Conditions</button>
             </label>
           </div>
@@ -141,10 +136,10 @@ const Signup = () => {
         </div>
 
         <div className="signup-right-button">
-          <label for="signup-right-button-id">
+          <label htmlFor="signup-right-button-id">
             <button 
               type="button" 
-              form="signup-form-id"
+              form="signup-submit-button-id"
               id="signup-right-button-id" 
               name="signup-right-button">
               Sign Up
@@ -154,7 +149,7 @@ const Signup = () => {
 
         <div className="signup-right-login">
           <p className="signup-right-login-text">Don't have an account yet?</p>
-          <label for="signup-right-login-button-id">
+          <label htmlFor="signup-right-login-button-id">
             <button type="button" id="signup-right-login-button-id" name="signup-right-login-button">Sign up</button>
           </label>
         </div>
