@@ -42,10 +42,6 @@ if (isset($_POST['submit'])) {
     }
     // After the import, show the button
     session_start();
-    echo '
-    <h3>Import Successfully</h3>
-    <form method="get" action="dashboard.php">
-    <button>Return to Dashboard</button>
-</form>';
+    echo 'hello';
 }
 ?>

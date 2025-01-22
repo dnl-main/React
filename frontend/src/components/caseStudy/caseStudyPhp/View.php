@@ -33,6 +33,7 @@ if ($result->num_rows > 0) {
 
     // Fetch and display each row from the result
     while ($row = $result->fetch_assoc()) {
+        echo "";
         echo "<tr>
                 <td>" . $row['id'] . "</td>
                 <td>" . $row['username'] . "</td>

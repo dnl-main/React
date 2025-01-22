@@ -16,12 +16,9 @@
   .add-record-modal {
     background-color: var(--white-color); /* White modal background */
     width: 500px; /* Fixed width for the modal */
-    padding: 24px;
-    border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Space between elements */
   }
   
   /* Modal title */
@@ -29,14 +26,12 @@
     font-size: var(--font-size-20); /* Dynamic font size variable */
     font-weight: var(--font-weight-bold); /* Bold font */
     text-align: center;
-    margin-bottom: 16px;
   }
   
   /* Form labels */
   .add-record-label {
-    font-size: var(--font-size-14); /* Adjust font size */
-    font-weight: var(--font-weight-regular); /* Regular weight */
-    margin-bottom: 4px;
+    font-size: var(--font-size-16); /* Adjust font size */
+    font-weight: var(--font-weight-regular); 
     display: block; /* Ensure each label is on its own line */
   }
   
@@ -54,23 +49,19 @@
   
   .add-record-input:focus,
   .add-record-textarea:focus {
-    border-color: var(--primary-color); /* Highlight border on focus */
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on focus */
+    border-color: var(--primary-color); 
   }
   
   /* Buttons container */
   .add-record-buttons {
     display: flex;
-    justify-content: space-between; /* Space between buttons */
-    margin-top: 16px;
+    justify-content: space-between; 
   }
   
   /* Buttons inherit the case-hero-buttons-submit styles */
   .case-hero-buttons-submit {
-    padding: 0 16px;
     width: 180px;
     height: 40px;
-    cursor: pointer;
     background-color: var(--primary-color);
     color: var(--white-color);
     border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
