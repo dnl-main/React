@@ -22,6 +22,7 @@ import NotificationUser from './user/notification/NotificationUser';
 import SidebarUser from './user/sidebar/SidebarUser';
 
 import CaseStudy from './components/caseStudy/CaseStudy';
+import CSLogin from './components/caseStudy/CSLogin';
 import Testt from './components/Testt';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/sidebarUser" element={<SidebarUser />} />
 
         <Route path="/caseStudy" element={<CaseStudy />} />
+        <Route path="/caseLogin" element={<CSLogin />} />
         <Route path="/testt" element={<Testt />} />
 
 

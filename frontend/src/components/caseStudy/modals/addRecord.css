@@ -1,78 +1,126 @@
-/* Modal overlay for the semi-transparent background */
-.add-record-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  /* Modal container */
-  .add-record-modal {
-    background-color: var(--white-color); /* White modal background */
-    width: 500px; /* Fixed width for the modal */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Modal title */
-  .add-record-title {
-    font-size: var(--font-size-20); /* Dynamic font size variable */
-    font-weight: var(--font-weight-bold); /* Bold font */
-    text-align: center;
-  }
-  
-  /* Form labels */
-  .add-record-label {
-    font-size: var(--font-size-16); /* Adjust font size */
-    font-weight: var(--font-weight-regular); 
-    display: block; /* Ensure each label is on its own line */
-  }
-  
-  /* Form inputs */
-  .add-record-input,
-  .add-record-textarea {
-    width: 100%; /* Full width inputs */
-    padding: 8px 12px; /* Comfortable spacing inside inputs */
-    border: var(--border-width-2) var(--border-style-solid) var(--border-color-20); /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    font-size: var(--font-size-14); /* Match the label font size */
-    font-family: inherit; /* Inherit font family */
-    outline: none; /* Remove default outline */
-  }
-  
-  .add-record-input:focus,
-  .add-record-textarea:focus {
-    border-color: var(--primary-color); 
-  }
-  
-  /* Buttons container */
-  .add-record-buttons {
-    display: flex;
-    justify-content: space-between; 
-  }
-  
-  /* Buttons inherit the case-hero-buttons-submit styles */
-  .case-hero-buttons-submit {
-    width: 180px;
-    height: 40px;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: var(--border-width-2) var(--border-style-solid) var(--border-color-20);
-    border-radius: 12px;
-    font-size: var(--font-size-12);
-    font-weight: var(--font-weight-semibold);
-    transition: background-color 0.3s ease;
-  }
-  
-  .case-hero-buttons-submit:hover {
-    background-color: var(--primary-color-opacity-60);
-    color: var(--white-color);
-  }
-  
+/* Overlay */
+.add_record-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.add_record-overlay-modal {
+  background-color: var(--white-color);
+  padding: 24px;
+  border-radius: 8px;
+  width: 420px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Heading */
+.add_record-overlay-modal-heading {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--black-color);
+}
+
+/* Form Styles */
+.add_record-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.add_record-label {
+  margin-bottom: 8px;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular);
+  color: var(--black-color);
+}
+
+/* Input */
+.add_record-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: var(--border-width-2) var(--border-style-solid) var(--black-color-opacity-20);
+  border-radius: 8px;
+  font-size: var(--font-size-12);
+}
+
+/* Textarea */
+.add_record-textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: var(--border-width-2) var(--border-style-solid) var(--black-color-opacity-20);
+  border-radius: 8px;
+  font-size: var(--font-size-12);
+  resize: none;
+}
+
+/* Message */
+.message {
+  font-size: var(--font-size-12);
+  color: var(--green-indicator);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Buttons Container */
+.add_record-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Button Styles */
+.add_record-button {
+  padding: 0 16px;
+  height: 40px;
+  width: 48%;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: var(--border-width-2) var(--border-style-solid) var(--primary-color);
+  border-radius: 8px;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add_record-button:hover {
+  background-color: var(--primary-color-opacity-60);
+  color: var(--white-color);
+}
+
+/* Cancel Button */
+.add_record-buttons-cancel {
+  background-color: var(--red-indicator-opacity-30);
+  color: var(--red-indicator);
+}
+
+.add_record-buttons-cancel:hover {
+  background-color: var(--red-indicator);
+  color: var(--white-color);
+}
+
+/* Submit Button */
+.add_record-buttons-submit {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.add_record-buttons-submit:hover {
+  background-color: var(--primary-color-opacity-60);
+}

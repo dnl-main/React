@@ -123,56 +123,153 @@ switch($method) {
 
             echo json_encode($response); // Send response back as JSON
         }
-        // if (isset($_POST['delete_all'])) {
-        //     // Truncate the table (delete all records)
-        //     $sql = "TRUNCATE TABLE maestro";
-        //     if ($conn->query($sql) === TRUE) {
-        //         $response = ['status' => 1, 'message' => 'All records have been deleted successfully.'];
-        //     } else {
-        //         $response = ['status' => 0, 'message' => 'Error deleting records: ' . $conn->$error];
-        //     }
-        //     echo json_encode($response); // Send response back as JSON
-        // }
+        
 
-        if (isset($_POST['submit'])) {
-            // Check if the file is uploaded without error
-            if ($_FILES['csvFile']['error'] == 0) {
-                $fileTmpName = $_FILES['csvFile']['tmp_name'];
-                $fileName = $_FILES['csvFile']['name'];
-        
-                // Open the CSV file for reading
-                $file = fopen($fileTmpName, 'r');
-        
-                // Skip row to kasi example ni sir header + ung blank
-                fgetcsv($file);
-                fgetcsv($file);
+        // Handle CSV file upload and import
+if (isset($_FILES['csvFile']) && $_FILES['csvFile']['error'] === UPLOAD_ERR_OK) {
+    $fileTmpPath = $_FILES['csvFile']['tmp_name'];
+    $fileName = $_FILES['csvFile']['name'];
+    $fileSize = $_FILES['csvFile']['size'];
+    $fileType = $_FILES['csvFile']['type'];
+    $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
-                // Process each row of the CSV
-                while (($row = fgetcsv($file)) !== FALSE) {
-                    // Skip na ung id kasi auto increment nasa db
-                    $username = $row[2];     
-                    $password = $row[3];     
-                    $role = $row[4];         
-                    $createdDate = $row[5];  
-                    $remarks = $row[6];     
-        
-                    // Convert the date format to YYYY-MM-DD using DateTime
-                    $dateObject = DateTime::createFromFormat('M d, Y', $createdDate);
-                    if ($dateObject) {
-                        $createdDate = $dateObject->format('Y-m-d');
-                    }
-        
-                    // Insert into the database
-                    $query = "INSERT INTO maestro (Username, Password, Role, CreatedDate, Remarks) 
-                              VALUES ('$username', '$password', '$role', '$createdDate', '$remarks')";
-        
-                    $conn->query($query);
+    if ($fileExtension === 'csv') {
+        if (($handle = fopen($fileTmpPath, "r")) !== false) {
+            // Skip the first row if it contains headers
+            fgetcsv($handle);
+            fgetcsv($handle);
+
+            $successCount = 0;
+            $errorCount = 0;
+
+            while (($data = fgetcsv($handle, 1000, ",")) !== false) {
+                // Map CSV columns to database columns
+                $username = $data[2];
+                $password = $data[3];
+                $role = $data[4];
+                $remarks = $data[6];
+                $createdDate = date('Y-m-d H:i:s'); // Current date
+
+                // Insert record into the database
+                $sql = "INSERT INTO maestro (username, password, role, remarks, CreatedDate) 
+                        VALUES (:username, :password, :role, :remarks, :created_date)";
+                $stmt = $conn->prepare($sql);
+
+                $stmt->bindParam(':username', $username);
+                $stmt->bindParam(':password', $password);
+                $stmt->bindParam(':role', $role);
+                $stmt->bindParam(':remarks', $remarks);
+                $stmt->bindParam(':created_date', $createdDate);
+
+                if ($stmt->execute()) {
+                    $successCount++;
+                } else {
+                    $errorCount++;
                 }
-        
-                  // Close the database connection
             }
-           
+            fclose($handle);
+
+            $response = [
+                'status' => 1,
+                'message' => "$successCount records imported successfully. $errorCount records failed."
+            ];
+        } else {
+            $response = [
+                'status' => 0,
+                'message' => 'Error opening the uploaded CSV file.'
+            ];
         }
+    } else {
+        $response = [
+            'status' => 0,
+            'message' => 'Please upload a valid CSV file.'
+        ];
+    }
+
+    echo json_encode($response); // Send response back as JSON
+}
+
+
+
+
+
+if (isset($_POST['delete_all'])) {
+    try {
+        // Truncate the table (delete all records)
+        $sql = "TRUNCATE TABLE maestro";
+        $stmt = $conn->prepare($sql);
+
+        if ($stmt->execute()) {
+            $response = [
+                'status' => 1,
+                'message' => 'All records have been deleted successfully.',
+            ];
+        } else {
+            // In case the execution fails
+            $response = [
+                'status' => 0,
+                'message' => 'Failed to delete records. Please try again.',
+            ];
+        }
+    } catch (PDOException $e) {
+        // Catch any SQL-related errors and return the error message
+        $response = [
+            'status' => 0,
+            'message' => 'Error deleting records: ' . $e->getMessage(),
+        ];
+    } catch (Exception $e) {
+        // Catch any general PHP errors
+        $response = [
+            'status' => 0,
+            'message' => 'Unexpected error: ' . $e->getMessage(),
+        ];
+    }
+
+    // Send JSON response back to the frontend
+    echo json_encode($response);
+}
+
+
+
+
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Query to check if the username exists
+    $login_sql = "SELECT * FROM maestro WHERE username = :username";
+    $login_stmt = $conn->prepare($login_sql);
+    $login_stmt->bindParam(':username', $username);
+    $login_stmt->execute();
+    $user = $login_stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        // If user exists, directly compare the passwords
+        if ($password === $user['password']) {  // Direct comparison since you're storing plaintext passwords
+            $response = ['status' => 1, 'message' => 'Login successful'];
+        } else {
+            // Password is incorrect
+            $response = ['status' => 0, 'message' => 'Invalid username or password'];
+        }
+    } else {
+        // Username does not exist in the database
+        $response = ['status' => 0, 'message' => 'Invalid username or password'];
+    }
+
+    echo json_encode($response); // Send response back as JSON
+} else {
+    // If username or password are missing in the POST request
+    $response = ['status' => 0, 'message' => 'Username and password are required'];
+    echo json_encode($response);
+}
+
+
+
+
+
+
+
 
         break;
 }

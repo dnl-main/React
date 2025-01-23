@@ -11,10 +11,12 @@ import Edit from '../caseStudy/assets/Edit.png';
 import Remove from '../caseStudy/assets/Remove.png';
 
 const CaseStudy = () => {
-  const [records, setRecords] = useState([]); // State for storing records
+  const [records, setRecords] = useState([]); 
   const [addRecord, setAddRecord] = useState(false);
   const [editRecord, setEditRecord] = useState(false);
   const [deleteRecord, setDeleteRecord] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null); 
+  const [message, setMessage] = useState('');
 
   // Fetch records from PHP API
   useEffect(() => {
@@ -29,15 +31,103 @@ const CaseStudy = () => {
   }, []);
 
 
+
+
+
+
+
+
+
+   // State for feedback messages
+
+// Handle file selection
+const handleFileChange = (event) => {
+  setSelectedFile(event.target.files[0]); // Set the selected file
+};
+
+// Handle form submission for file upload
+const handleFileUpload = async (e) => {
+  e.preventDefault();
+
+  if (!selectedFile) {
+    setMessage('Please select a file to upload.');
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('csvFile', selectedFile); // Append the file
+    formData.append('submit', true); // Simulate the submit button
+
+    const response = await axios.post('http://localhost/Concorde/backend/index.php', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data', // Correct Content-Type for file upload
+      },
+    });
+
+    if (response.status === 200) {
+      setMessage('File uploaded successfully.');
+    } else {
+      setMessage('File upload failed.');
+    }
+  } catch (error) {
+    console.error('Error uploading file:', error);
+    setMessage('An error occurred while uploading the file.');
+  }
+};
+
+
+
+
+
+const handleDeleteAll = async () => {
+  try {
+    // Send the request to the backend with a POST to delete all records
+    const response = await axios.post(
+      'http://localhost/Concorde/backend/index.php',
+      new URLSearchParams({ delete_all: 'true' }),  // Correct way to send form data
+      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+    );
+
+    // Check the response from the backend
+    if (response.data.status === 1) {
+      setMessage('All records have been deleted successfully.');
+      setRecords([]); // Clear the local records state
+    } else {
+      setMessage('Error deleting records: ' + response.data.message);
+    }
+  } catch (error) {
+    console.error('Error deleting all records:', error);
+    setMessage('An error occurred while deleting records.');
+  }
+};
+
+
+
+
+
+
+
   return (
     <div className="case">
       <div className="case-hero">
         <p className="case-hero-heading">CRUD operations in <br /> Web applications</p>
         <div className="case-hero-buttons">
-          <form action="" method="post" encType="multipart/form-data">
-            <button className="case-hero-buttons-submit" type="submit" name="submit">Import CSV</button>
-            <input className="case-hero-buttons-upload" type="file" name="csvFile" id="csvFile" required />
-          </form>
+          
+        <form onSubmit={handleFileUpload}>
+          <button className="case-hero-buttons-submit" type="submit" name="submit">
+            Import CSV
+          </button>
+          <input
+            className="case-hero-buttons-upload"
+            type="file"
+            name="csvFile"
+            id="csvFile"
+            onChange={handleFileChange} // Set the file on change
+            required
+          />
+        </form>
+        {message && <p>{message}</p>}
         </div>
       </div>
 
@@ -89,12 +179,29 @@ const CaseStudy = () => {
             <p className="case-records-header-heading-text">All records</p>
           </div>
           <div className="case-records-header-button">
-            {/* <button 
-              type="button" 
-              className="case-hero-buttons-submit"
-              onClick={}>
-              Delete All Data
-            </button> */}
+            
+            
+            
+            
+          <button 
+  type="button" 
+  className="case-hero-buttons-submit"
+  onClick={handleDeleteAll}
+>
+  Delete All Data
+</button>
+
+
+      {message && <p>{message}</p>}
+
+
+
+
+
+
+
+
+
           </div>
         </div>
 
