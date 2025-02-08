@@ -1,5 +1,8 @@
-/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 .all {
+  font-family: 'Inter', sans-serif;
   font-size: 12px; /* Default base font size */
   box-sizing: border-box;
   width: 1440px;
@@ -12,26 +15,43 @@
   padding: 0;
 }
 
-/* Root variables */
 :root {
-  /* Colors */
+  /* main color */
   --primary-color: #00889a;
-  --background-color: #f5f6fa;
+  --secondary-color: #f5f6fa;
   --black-color: #14181f;
   --white-color: #ffffff;
 
+  --primary-color-opacity-15: rgba(0, 136, 154, 0.15);
+  --secondary-color-opacity-15: rgba(245, 246, 250, 0.15); 
+  --black-color-opacity-15: rgba(20, 24, 31, 0.15); 
+  --white-color-opacity-15: rgba(255, 255, 255, 0.15); 
+
+  --primary-color-opacity-30: rgba(0, 136, 154, 0.3);
+  --secondary-color-opacity-30: rgba(245, 246, 250, 0.3); 
+  --black-color-opacity-30: rgba(20, 24, 31, 0.3); 
+  --white-color-opacity-30: rgba(255, 255, 255, 0.3); 
+
+  --primary-color-opacity-45: rgba(0, 136, 154, 0.45);
+  --secondary-color-opacity-45: rgba(245, 246, 250, 0.45); 
+  --black-color-opacity-45: rgba(20, 24, 31, 0.45); 
+  --white-color-opacity-45: rgba(255, 255, 255, 0.45); 
+
+  --primary-color-opacity-60: rgba(0, 136, 154, 0.6);
+  --secondary-color-opacity-60: rgba(245, 246, 250, 0.6); 
+  --black-color-opacity-60: rgba(20, 24, 31, 0.6); 
+  --white-color-opacity-60: rgba(255, 255, 255, 0.6); 
+
+  --primary-color-opacity-75: rgba(0, 136, 154, 0.75);
+  --secondary-color-opacity-75: rgba(245, 246, 250, 0.75); 
+  --black-color-opacity-75: rgba(20, 24, 31, 0.75); 
+  --white-color-opacity-75: rgba(255, 255, 255, 0.75); 
+
+  /* indicator color */
   --red-indicator: #fa6464;
   --green-indicator: #36c081;
   --yellow-indicator: #ffdc6c;
   --blue-indicator: #4c79d3;
-  
-
-
-  --primary-color-opacity-30: rgba(0, 136, 154, 0.3);
-  --primary-color-opacity-60: rgba(0, 136, 154, 0.6); 
-  --background-color-opacity-70: rgba(245, 246, 250, 0.7); 
-  --black-color-opacity-20: rgba(20, 24, 31, 0.2); 
-  --white-color-opacity-60: rgba(255, 255, 255, 0.6); 
 
   --red-indicator-opacity-30: rgba(250, 100, 100, 0.3);
   --green-indicator-opacity-30: rgba(54, 192, 129, 0.3);
@@ -40,6 +60,7 @@
 
   /* Font settings */
   --font-family: 'Inter', sans-serif;
+  --font-accent: "Bricolage Grotesque", serif;
   
   --font-weight-extralight: 200;
   --font-weight-light: 300;
