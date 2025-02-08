@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F6FA;
+  }
+
+  .notifications-container {
+    max-width: 1150px;
+    margin: 50px auto;
+    background: #F5F6FA;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .notifications-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .notifications-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+
+  .notifications-header i {
+    color: #17a2b8;
+    margin-right: 10px;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .filter-tab {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background: #f8f9fc;
+    border: 1px solid #e0e0e0;
+    color: #00899A;
+    cursor: pointer;
+  }
+  .filter-tab i {
+    font-size: 15px; /* Small circle size */
+    color: #9E9E9E; /* Same color as the active tab */
+    margin-right: 5px; /* Spacing between the circle and text */
+    }
+
+
+  .filter-tab.active {
+    background: #17a2b8;
+    color: white;
+  }
+
+  .notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #f8f9fc;
+    position: relative; /* Allows the use of absolute positioning for the strip */
+  } 
+
+  .notification-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px; /* Width of the color strip */
+    height: 100%;
+    border-radius: 5px 0 0 5px; /* Rounded corners for the left strip */
+    background-color: #17a2b8; /* Default color */
+  }
+  .notification-item:nth-child(1)::before {
+    background-color: #00ff4c; /* Green */
+  }
+  .notification-item:nth-child(2)::before {
+    background-color: #007bff; /* Blue */
+  }
+  .notification-item:nth-child(3)::before {
+    background-color: #ffc107; /* Yellow */
+  }
+
+  .notification-item:nth-child(4)::before {
+     background-color: #dc3545; /* Red */
+  }
+
+  .notification-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #424242;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .notification-content {
+    font-size: 0.9rem;
+    color: #495057;
+  }
+
+  .notification-content p {
+    margin: 2px 0;
+  }
+
+  .notification-span {
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+    margin-top: 20px; /* Adds space above the container */
+    margin-bottom: 15px; /* Adds space below the container */
+  }
+
+
+  .notification-content .title {
+    font-weight: 600;
+    color: #343a40;
+  }
+
+  .subtext-container {
+    display: flex;
+    gap: 5px; /* Reduces spacing between cards */
+    margin-top: 15px;
+  }
+
+  .date-time-card {
+    background: #f8f9fc;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px; /* Decrease padding for smaller height */
+    font-size: 12px; /* Slightly smaller text size */
+    color: #495057;
+    text-align: center;
+    flex: 1; /* Ensures cards stretch evenly */
+    min-width: 150px; /* Sets a smaller minimum width */
+    max-width: 200px; /* Prevents cards from being too wide */
+
+  }
+
+  .date-time-card p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #424242;
+  }
+
+
+  .notification-content .subtext {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+
+  .notification-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .action-btn {
+    margin-right: 200px;
+    padding: 8px 12px;
+    background-color: #F5F6FA;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex; /* Makes the icon and text align horizontally */
+    align-items: center; /* Vertically centers content */
+    gap: 5px; /* Spacing between the icon and text */
+  }
+
+  .action-btn i {
+    font-size: 15px; /* Adjust size of the circle icon */
+    color: #9E9E9E;
+  
+  }
+
+  .action-btn:hover {
+    background: #17a2b8;
+    color: white;
+  } 
+
+  .action-btn:hover i {
+    color: white; /* Change the icon color on hover */
+  }
+
+
+  .action-btn:hover {
+    background: #17a2b8;
+    color: white;
+  }
+
+  .check-icon, .upload-icon, .cancel-icon {
+    font-size: 1.2rem;
+  }
+
+  .check-icon {
+    color: #28a745;
+  }
+
+  .upload-icon {
+    color: #007bff;
+  }
+
+  .cancel-icon {
+    color: #dc3545;
+  }

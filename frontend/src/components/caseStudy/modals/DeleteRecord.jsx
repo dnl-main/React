@@ -6,7 +6,6 @@ const DeleteRecord = ({ closeDeleteRecord }) => {
   const [deleteUsername, setDeleteUsername] = useState('');
   const [message, setMessage] = useState('');
 
-  // Handle form submission for deleting a record
   const handleDelete = async (e) => {
     e.preventDefault();
 

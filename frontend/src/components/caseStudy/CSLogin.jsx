@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import './csLogin.css';
-import axios from "axios";  // Import axios
-import { useNavigate } from "react-router-dom";  // Import useNavigate from react-router-dom
+import axios from "axios";  
+import { useNavigate } from "react-router-dom";  
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();  // Initialize the navigate function
+  const navigate = useNavigate(); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,22 +17,22 @@ function Login() {
     loginData.append('username', username);
     loginData.append('password', password);
 
-    // Use axios to make the POST request
+
     axios
       .post("http://localhost/Concorde/backend/index.php", loginData)
       .then((response) => {
-        // Handle the response here
+
         const data = response.data;
         if (data.status === 1) {
           setMessage("Login successful!");
-          // Redirect to /caseStudy if login is successful
-          navigate("/caseStudy");  // This will navigate to the /caseStudy route
+          
+          navigate("/caseStudy");  
         } else {
           setMessage(data.message);
         }
       })
       .catch((error) => {
-        // Handle errors here
+        
         setMessage("Error occurred: " + error.message);
       });
   };

@@ -1,32 +1,31 @@
-import React, { useState, useEffect } from 'react';  // Importing useState and useEffect hooks
-import axios from 'axios'; // Importing Axios for API requests
+import React, { useState, useEffect } from 'react';  
+import axios from 'axios';
 import './addRecord.css';
 
 const AddRecord = ({ closeAddRecord }) => {
 
-  const [newUsername, setNewUsername] = useState('');  // Initial state for newUsername
-  const [newPassword, setNewPassword] = useState('');  // Initial state for newPassword
-  const [newRole, setNewRole] = useState('');  // Initial state for newRole
-  const [newRemarks, setNewRemarks] = useState('');  // Initial state for newRemarks
-  const [message, setMessage] = useState('');  // Initial state for message (success/error)
-  const [fetchedRecords, setFetchedRecords] = useState([]);  // To hold fetched records
-
-  // Fetch records from the PHP API when the component is first mounted
+  const [newUsername, setNewUsername] = useState('');  
+  const [newPassword, setNewPassword] = useState(''); 
+  const [newRole, setNewRole] = useState('');  
+  const [newRemarks, setNewRemarks] = useState(''); 
+  const [message, setMessage] = useState(''); 
+  const [fetchedRecords, setFetchedRecords] = useState([]); 
+  
   useEffect(() => {
-    fetchRecords(); // Fetch records on initial load
-  }, []); // Empty array ensures this runs only once on mount
+    fetchRecords(); 
+  }, []);
 
-  // Fetch records function
+
   const fetchRecords = async () => {
     try {
-      const response = await axios.get("http://localhost/Concorde/backend/index.php"); // Correct API path
-      setFetchedRecords(response.data); // Set fetched records in the state
+      const response = await axios.get("http://localhost/Concorde/backend/index.php");
+      setFetchedRecords(response.data); 
     } catch (error) {
       console.error("Error fetching records:", error);
     }
   };
 
-  // Handle form submission with Axios
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -44,10 +43,10 @@ const AddRecord = ({ closeAddRecord }) => {
         },
       });
 
-      // Check if the record was added successfully
+      
       if (response.data.status === 1) {
         setMessage('New record added successfully!');
-        fetchRecords(); // Refresh records after adding a new one
+        fetchRecords(); 
       } else {
         setMessage('Error adding record: ' + response.data.message);
       }
@@ -71,7 +70,7 @@ const AddRecord = ({ closeAddRecord }) => {
             required 
             className="add_record-input"
             value={newUsername}
-            onChange={(e) => setNewUsername(e.target.value)}  // Update state on change
+            onChange={(e) => setNewUsername(e.target.value)}  
           />
 
           <label htmlFor="new_password" className="add_record-label">Password:</label>
@@ -82,7 +81,7 @@ const AddRecord = ({ closeAddRecord }) => {
             required 
             className="add_record-input"
             value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}  // Update state on change
+            onChange={(e) => setNewPassword(e.target.value)}  
           />
 
           <label htmlFor="new_role" className="add_record-label">Role:</label>
@@ -93,7 +92,7 @@ const AddRecord = ({ closeAddRecord }) => {
             required 
             className="add_record-input"
             value={newRole}
-            onChange={(e) => setNewRole(e.target.value)}  // Update state on change
+            onChange={(e) => setNewRole(e.target.value)} 
           />
 
           <label htmlFor="new_remarks" className="add_record-label">Remarks:</label>
@@ -104,16 +103,16 @@ const AddRecord = ({ closeAddRecord }) => {
             cols="50"
             className="add_record-textarea"
             value={newRemarks}
-            onChange={(e) => setNewRemarks(e.target.value)}  // Update state on change
+            onChange={(e) => setNewRemarks(e.target.value)}  
           ></textarea>
 
-          {message && <div className="message">{message}</div>}  {/* Show message (success/error) */}
+          {message && <div className="message">{message}</div>}
 
           <div className="add_record-buttons">
             <button 
               type="button" 
               className="add_record-buttons-cancel"
-              onClick={() => closeAddRecord(false)}  // Close the form when canceled
+              onClick={() => closeAddRecord(false)} 
             >
               Cancel
             </button>

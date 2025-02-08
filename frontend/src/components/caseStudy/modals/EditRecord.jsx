@@ -1,38 +1,36 @@
-import React, { useState } from 'react'; // Import useState here
+import React, { useState } from 'react'; 
 import './editRecord.css';
-import axios from 'axios'; // Ensure axios is imported
+import axios from 'axios'; 
 
 const EditRecord = ({ closeEditRecord }) => {
-  const [selectUsername, setSelectUsername] = useState(''); // Username to update
-  const [newUsername, setNewUsername] = useState(''); // Optional new username
+  const [selectUsername, setSelectUsername] = useState(''); 
+  const [newUsername, setNewUsername] = useState(''); 
   const [newPassword, setNewPassword] = useState('');
   const [newRole, setNewRole] = useState('');
   const [newRemarks, setNewRemarks] = useState('');
   const [message, setMessage] = useState('');
 
-  // Handle form submission for updating a record
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare the data to send
     const data = {
       select_username: selectUsername,
       new_username: newUsername,
       new_password: newPassword,
       new_role: newRole,
       new_remarks: newRemarks,
-      update: 'true', // Ensure 'update' is sent as a string to trigger the PHP 'isset'
+      update: 'true', 
     };
 
     try {
-      // Send data via POST request to PHP backend
+     
       const response = await axios.post('http://localhost/Concorde/backend/index.php', data, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       });
 
-      // Check the response status and message
+     
       if (response.data.status === 1) {
         setMessage('Record updated successfully!');
       } else {
@@ -104,7 +102,7 @@ const EditRecord = ({ closeEditRecord }) => {
             onChange={(e) => setNewRemarks(e.target.value)}
           ></textarea>
 
-          {message && <div className="message">{message}</div>} {/* Show success/error message */}
+          {message && <div className="message">{message}</div>} 
 
           <div className="edit-record-buttons">
             <button

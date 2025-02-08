@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: #00899A;
+}
+
+.home-icon i {
+    font-size: 24px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #00899A;
+}
+
+.status-indicator i {
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+.scheduled-certificate-wrapper {
+    display: flex;
+    justify-content: space-between; /* Aligns containers side by side with space between */
+    gap: 20px; /* Adds spacing between containers */
+}
+
+/* Scheduled Container */
+.scheduled-appointment {
+    flex: 1; /* Ensures equal width */
+    max-width: 48%; /* Prevents them from being too wide */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+.scheduled-appointment i {
+    font-size: 40px; 
+    margin-left: 30px;
+    color: #00899A;
+}
+
+.scheduled-appointment .date {
+    font-size: 20px; 
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scheduled-appointment .time {
+    font-size: 15px; 
+    color: #666;
+    gap: 5px;
+}
+
+.set-appointment {
+    padding: 5px 30px;
+    margin-left: 200px;
+    background-color: #00899A;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.set-appointment:hover {
+    background-color: #007788;
+}
+
+/* Certificate Container */
+.certificate-upload {
+    flex: 1; /* Ensures equal width */
+    max-width: 48%; /* Prevents them from being too wide */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.certificate-upload .progress {
+    height: 100%;
+    background-color: #00899A;
+}
+
+.file-upload {
+    margin-top: 10px;
+}
+
+.file-upload select {
+    padding: 8px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.file-input {
+    margin-top: 10px;
+    border: 2px dashed #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.file-input label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.file-input input {
+    display: none;
+}
+
+.file-input:hover {
+    border-color: #00899A;
+}
+
+
+/* Notifications Container*/
+.notifications {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notifications h3 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    gap: 15px;
+}
+
+.notification-item .profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.notification-item .details {
+    flex: 1;
+}
+
+.notification-item .details p {
+    margin: 5px 0;
+    font-weight: 200;
+    color: #343a40;
+    font-size: 14px;
+}
+.notification-content .subtext {
+    display: flex;
+    gap: 10px;
+    color: #777;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.date-card,
+.start-time-card,
+.end-time-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 9px;
+    padding: 5px; /* Decrease padding for smaller height */
+    font-size: 12px; /* Slightly smaller text size */
+    color: #495057;
+    text-align: center;
+    flex: 1; /* Ensures cards stretch evenly */
+    min-width: 100px; /* Sets a smaller minimum width */
+    max-width: 190px; /* Prevents cards from being too wide */
+    gap: 5px;
+    
+}
+
+
+.notification-item .details .date-time {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.notification-item .details .date-time i {
+    margin-right: 5px;
+}
+
+.new-appointment {
+    margin-right: 200px;
+    padding: 8px 12px;
+    background-color: #F5F6FA;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.new-appointment:hover {
+    background-color: #007788;
+}
+
+.notification-item .status-icon {
+    font-size: 20px;
+    color: #00899A;
+}
+.check-icon {
+    color: #28a745;
+}

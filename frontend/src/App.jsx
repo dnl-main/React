@@ -14,6 +14,7 @@ import Schedule from './admin/schedule/Schedule';
 import Signup from './onboarding/signup/Signup';
 import Registration from './onboarding/register/Registration';
 import Login from './onboarding/login/Login';
+import Landing from './onboarding/landing/Landing';
 import AccountUser from './user/account/AccountUser';
 import CertificateUser from './user/certificate/CertificateUser';
 import HomeUser from './user/home/HomeUser';
@@ -23,7 +24,8 @@ import SidebarUser from './user/sidebar/SidebarUser';
 
 import CaseStudy from './components/caseStudy/CaseStudy';
 import CSLogin from './components/caseStudy/CSLogin';
-import Testt from './components/Testt';
+
+
 
 function App() {
   return (
@@ -41,6 +43,7 @@ function App() {
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/schedule" element={<Schedule />} />
 
+        <Route path="/landing" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
@@ -54,7 +57,6 @@ function App() {
 
         <Route path="/caseStudy" element={<CaseStudy />} />
         <Route path="/caseLogin" element={<CSLogin />} />
-        <Route path="/testt" element={<Testt />} />
 
 
 

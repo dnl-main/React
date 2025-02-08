@@ -1,0 +1,34 @@
+.landing {
+	display: flex;
+}
+	.landing-left {}
+		.landing-left-logo {}
+			.landing-left-logo img {
+				height: 24px;
+				width: auto;
+			}
+		.landing-left-header {}
+			.landing-left-header-heading {}
+			.landing-left-header-sub {}
+		.landing-left-buttons {}
+			.landing-left-buttons-sign_up {}
+			.landing-left-buttons-log_in {}
+		.landing-left-reviews {}
+			.landing-left-reviews-rating {}
+				.landing-left-reviews-rating-img {}
+				.landing-left-reviews-rating-value {}
+					.landing-left-reviews-rating-value-star {}
+						.landing-left-reviews-rating-value-star-all {}
+					.landing-left-reviews-rating-value-star-total {}
+			.landing-left-reviews-result {}
+				.landing-left-reviews-result-efficiency {}
+				.landing-left-reviews-result-delay {}
+				.landing-left-reviews-result-accuracy {}
+					.landing-left-reviews-result-text-big {}
+					.landing-left-reviews-result-text-small {}
+	.landing-right {}
+
+
+
+
+

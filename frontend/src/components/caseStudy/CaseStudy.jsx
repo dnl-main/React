@@ -18,12 +18,12 @@ const CaseStudy = () => {
   const [selectedFile, setSelectedFile] = useState(null); 
   const [message, setMessage] = useState('');
 
-  // Fetch records from PHP API
+
   useEffect(() => {
     axios
-      .get("http://localhost/Concorde/backend/index.php") // Replace with the correct path to your PHP file
+      .get("http://localhost/Concorde/backend/index.php") 
       .then((response) => {
-        setRecords(response.data); // Update the state with fetched data
+        setRecords(response.data); 
       })
       .catch((error) => {
         console.error("Error fetching records:", error);
@@ -38,14 +38,12 @@ const CaseStudy = () => {
 
 
 
-   // State for feedback messages
 
-// Handle file selection
 const handleFileChange = (event) => {
-  setSelectedFile(event.target.files[0]); // Set the selected file
+  setSelectedFile(event.target.files[0]); 
 };
 
-// Handle form submission for file upload
+
 const handleFileUpload = async (e) => {
   e.preventDefault();
 
@@ -56,12 +54,12 @@ const handleFileUpload = async (e) => {
 
   try {
     const formData = new FormData();
-    formData.append('csvFile', selectedFile); // Append the file
-    formData.append('submit', true); // Simulate the submit button
+    formData.append('csvFile', selectedFile); 
+    formData.append('submit', true);
 
     const response = await axios.post('http://localhost/Concorde/backend/index.php', formData, {
       headers: {
-        'Content-Type': 'multipart/form-data', // Correct Content-Type for file upload
+        'Content-Type': 'multipart/form-data', 
       },
     });
 
@@ -82,17 +80,17 @@ const handleFileUpload = async (e) => {
 
 const handleDeleteAll = async () => {
   try {
-    // Send the request to the backend with a POST to delete all records
+    
     const response = await axios.post(
       'http://localhost/Concorde/backend/index.php',
-      new URLSearchParams({ delete_all: 'true' }),  // Correct way to send form data
+      new URLSearchParams({ delete_all: 'true' }), 
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
     );
 
-    // Check the response from the backend
+    
     if (response.data.status === 1) {
       setMessage('All records have been deleted successfully.');
-      setRecords([]); // Clear the local records state
+      setRecords([]); 
     } else {
       setMessage('Error deleting records: ' + response.data.message);
     }
@@ -123,7 +121,7 @@ const handleDeleteAll = async () => {
             type="file"
             name="csvFile"
             id="csvFile"
-            onChange={handleFileChange} // Set the file on change
+            onChange={handleFileChange} 
             required
           />
         </form>
