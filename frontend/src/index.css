@@ -5,8 +5,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 12px; /* Default base font size */
   box-sizing: border-box;
-  width: 1440px;
-  height: 1024px;
+  /* width: 1440px;
+  height: 1024px; */
 }
 
 *, *::before, *::after {
@@ -21,6 +21,11 @@
   --secondary-color: #f5f6fa;
   --black-color: #14181f;
   --white-color: #ffffff;
+
+  --primary-color-opacity-10: rgba(0, 136, 154, 0.1);
+  --secondary-color-opacity-10: rgba(245, 246, 250, 0.1); 
+  --black-color-opacity-10: rgba(20, 24, 31, 0.1); 
+  --white-color-opacity-10: rgba(255, 255, 255, 0.1); 
 
   --primary-color-opacity-15: rgba(0, 136, 154, 0.15);
   --secondary-color-opacity-15: rgba(245, 246, 250, 0.15); 

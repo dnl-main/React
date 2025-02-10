@@ -3,6 +3,9 @@ import './login.css';
 // import axios from 'axios';
 // import { useNavigate } from 'react-router-dom';
 
+import concorde from '../../assets/logo/concorde.png';
+import login_sailor from '../../assets/overlay/login_sailor.png';
+
 
 const Login = () => {
 
@@ -10,34 +13,34 @@ const Login = () => {
     <div className="login">
       <div className="login-left">
         <div className="login-left-top">
-          <img src="" className="" alt="Concorde logo"></img>
-        </div>
+          <img src={concorde} className="" alt="Concorde logo"></img>
+        </div> {/* login-left-top */}
         <div className="login-left-bottom">
-          <img src="" className="" alt="Big picture"></img>
-        </div>
-      </div>
-
+          <img src={login_sailor} className="" alt="Big picture"></img>
+        </div> {/* login-left-bottom */}
+      </div> {/* login-left */}
+      
       <div className="login-right">
+      <div className="login-right-padding">
         <div className="login-right-header">
           <p className="login-right-header-sub">Jump back in</p>
-          <p className="login-right-header-main">Welcome back</p>
-        </div>
+          <p className="login-right-header-heading">Welcome back</p>
+        </div> {/* login-right-header */}
+        
 
-        <div className="login-right-form">
 
-
-          {/* login form */}
-          <form id="login-form">
+        <div className="login-right-form"> 
+          <form id="login-form" className="login-right-form-form">
             <div className="login-right-form-email">
               <label htmlFor="login-email-id">Email</label>
               <input 
                 type="email" 
                 id="login-email-id" 
                 name="login-email"  
-                placeholder="e.g. juandelacruz@gmail.com" 
+                placeholder="E.g. juandelacruz@gmail.com" 
                 required 
-              />
-            </div>
+              />    
+            </div> {/* login-right-form-email */}
             <div className="login-right-form-password">
               <label htmlFor="login-password-id">Password</label>
               <input 
@@ -47,9 +50,9 @@ const Login = () => {
                 placeholder="Enter your password" 
                 required 
               />
-            </div>
-          </form>
-        </div>
+            </div> {/* login-right-form-password */}
+          </form> {/* login-form */}
+        </div> {/* login-right-form */}
 
         <div className="login-right-options">
           <div className="login-right-options-remember">
@@ -60,7 +63,7 @@ const Login = () => {
               required 
             />
             <label htmlFor="remember-checkbox-id">Remember me</label>
-          </div>
+          </div> {/* login-right-options-remember */}
           
           <div className="login-right-options-forgot">
               <button 
@@ -70,8 +73,8 @@ const Login = () => {
                 >
                 Forgot Password?
                 </button>
-          </div>
-        </div>
+          </div> {/* login-right-options-forgot */}
+        </div> {/* login-right-options */}
 
         <div className="login-right-button">
             <button 
@@ -81,15 +84,15 @@ const Login = () => {
               >
               Log in
               </button>
-        </div>
-
+        </div> {/* login-right-button */}
+        <div className="login-right-spacer"></div> {/* login-right-spacer */}
         <div className="login-right-signup">
-          <p className="login-right-signup-text">Don't have an account yet?</p>
-            <button id="signup-button">Sign up</button>
+          <p className="login-right-signup-text">Don't have an account yet?&nbsp; </p>
+          <button id="signup-button"> Sign up</button>
+        </div> {/* login-right-signup */}
 
-
-        </div>
-      </div>
+      </div> {/* login-right-padding */} 
+      </div> {/* login-right */}
     </div>
   );
 };
