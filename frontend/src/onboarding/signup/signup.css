@@ -1,0 +1,185 @@
+.signup {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--secondary-color);
+}
+	.signup-left {
+		
+		height: 100%;
+		width: 55%;
+	}
+	.signup-left-padding {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		padding: 60px;
+	}
+
+		.signup-left-top {
+			display: flex;
+			justify-content: start;
+			height: max-content;
+			width: 100%;
+		} 
+			.signup-left-top img {
+				height: 24px;
+				width: auto;
+			} 
+		.signup-left-bottom {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			flex-grow: 1;
+		}
+			.signup-left-bottom img {
+				height: 76%;
+				width: auto;
+			} 
+	.signup-right {
+		height: 100%;
+		width: 45%;
+		padding: 20px;
+	}
+		.signup-right-padding {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			width: 100%;
+			padding: 60px;
+			row-gap: 40px;
+			background-color: var(--white-color);
+			border-radius: 20px;
+			box-shadow: 0px 0px 200px var(--primary-color-opacity-10);
+		}
+			.signup-right-header {
+				display: flex;
+				flex-direction: column;
+				color: var(--black-color);
+				line-height: 1.4;
+				margin-bottom: 20px;
+			}
+				.signup-right-header-sub {
+					font-weight: var(--font-weight-medium);
+					font-size: var(--font-size-16);
+					color: var(--black-color-opacity-45);
+				}
+				.signup-right-header-main {
+					font-weight: var(--font-weight-semibold);
+					font-size: var(--font-size-32);
+					color: var(--black-color);
+				}
+			.signup-right-form {
+				display: flex;
+				flex-direction: column;
+				row-gap: 20px;
+			}
+				.signup-right-form label {
+					font-weight: var(--font-weight-medium);
+					font-size: var(--font-size-16);
+					color: var(--black-color);
+				}
+				.signup-right-form input {
+					height: 58px;
+					width: 100;
+					padding: 20px;
+					text-align: left;
+					background-color: var(--secondary-color);
+					border: 2px solid var(--primary-color-opacity-15);
+					border-radius: 8px;
+				}
+				.signup-right-form input::placeholder {
+					font-weight: var(--font-weight-light);
+					font-size: var(--font-size-12);
+					color: var(--black-color-opacity-45);
+				}
+
+				.signup-right-form-name {
+					display: flex;
+					flex-direction: column;
+					row-gap: 16px;
+				}
+				.signup-right-form-email {
+					display: flex;
+					flex-direction: column;
+					row-gap: 16px;
+				}
+				.signup-right-form-mobile {
+					display: flex;
+					flex-direction: column;
+					row-gap: 16px;
+				}
+				.signup-right-form-password {
+					display: flex;
+					flex-direction: column;
+					row-gap: 16px;
+				}
+
+
+
+			.signup-right-terms {
+				display: flex;
+				flex-direction: row;
+			}
+				.signup-right-terms-checkbox {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					column-gap: 8px;
+				}
+					.signup-right-terms-checkbox label {
+						font-weight: var(--font-weight-regular);
+						font-size: var(--font-size-12);
+						color: var(--black-color-opacity-45);
+					}
+					.signup-right-terms-checkbox input[type="checkbox"] {
+						width: 16px;
+						height: 16px;
+						border: 2px solid var(--primary-color); 
+						border-radius: 4px;
+					}
+				.signup-right-terms-content {
+					font-weight: var(--font-weight-regular);
+					font-size: var(--font-size-12);
+					color: var(--primary-color);
+				}
+					.signup-right-terms-content button {
+						all: unset;
+					}
+			.signup-right-button {
+				font-weight: var(--font-weight-semibold);
+				font-size: var(--font-size-20);
+				color: var(--white-color);
+			}
+				.signup-right-button button {
+					all: unset;
+					height: 58px;
+					width: 100%;
+					text-align: center;
+					background-color: var(--primary-color);
+					border-radius: 100px;
+				}
+			.signup-right-spacer{
+				flex-grow: 1;
+			}
+			.signup-right-login {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+			}
+				.signup-right-login-text {
+					font-weight: var(--font-weight-medium);
+					font-size: var(--font-size-16);
+					color: var(--black-color-opacity-45);
+				}
+				.signup-right-login-button {
+					all: unset;
+					font-weight: var(--font-weight-medium);
+					font-size: var(--font-size-16);
+					color: var(--primary-color);
+				}

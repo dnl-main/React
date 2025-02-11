@@ -7,17 +7,16 @@ const Registration = () => {
       <div className="registration-header">
         <p className="registration-header-heading">You're almost there!</p>
         <p className="registration-header-sub">Just one more step</p>
-      </div>
+      </div> {/* registration-header */}
 
       <div className="registration-container">
         <div className="registration-container-header">
           <p className="registration-container-header-sub">Tell us more about yourself</p>
           <p className="registration-container-header-heading">Complete your profile</p>
-        </div>
+        </div> {/* registration-container-header */}
 
         <div className="registration-container-content">
           <form id="registration-submit-button-id" action="">
-
             <div className="registration-container-content-column-address">
               <div className="registration-container-content-column-address-header">
                 <img src="" className="" alt="address icon" />

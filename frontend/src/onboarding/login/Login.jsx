@@ -85,12 +85,13 @@ const Login = () => {
               Log in
               </button>
         </div> {/* login-right-button */}
+
         <div className="login-right-spacer"></div> {/* login-right-spacer */}
+
         <div className="login-right-signup">
           <p className="login-right-signup-text">Don't have an account yet?&nbsp; </p>
           <button id="signup-button"> Sign up</button>
         </div> {/* login-right-signup */}
-
       </div> {/* login-right-padding */} 
       </div> {/* login-right */}
     </div>
