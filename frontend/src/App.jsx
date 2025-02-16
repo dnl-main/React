@@ -24,6 +24,7 @@ import SidebarUser from './user/sidebar/SidebarUser';
 
 import CaseStudy from './components/caseStudy/CaseStudy';
 import CSLogin from './components/caseStudy/CSLogin';
+import { Navbar } from './admin/navbar/Navbar';
 
 
 
@@ -57,6 +58,8 @@ function App() {
 
         <Route path="/caseStudy" element={<CaseStudy />} />
         <Route path="/caseLogin" element={<CSLogin />} />
+
+        <Route path="/navbar" element={<Navbar />} />
 
 
 
