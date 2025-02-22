@@ -6,6 +6,7 @@ import Search from '../../assets/icons/Search.svg';
 import Filter from '../../assets/icons/Filter.svg';
 import User_Circle from '../../assets/icons/User_Circle.svg';
 
+
 export const Navbar = () => {
   return (
     <nav className="navbar">

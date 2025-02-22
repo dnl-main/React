@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './admin/home/Home' ;
 import Availability from './admin/availability/Availability';
-import Account from './admin/account/account';
+import Account from './admin/account/Account';
 import Calendar from './admin/calendar/Calendar';
 import Certificate from './admin/certificate/Certificate';
 import Notification from './admin/notification/Notification';
@@ -25,6 +25,7 @@ import SidebarUser from './user/sidebar/SidebarUser';
 import CaseStudy from './components/caseStudy/CaseStudy';
 import CSLogin from './components/caseStudy/CSLogin';
 import { Navbar } from './admin/navbar/Navbar';
+import Sidebar from './admin/sidebar/Sidebar';
 
 
 
@@ -60,6 +61,10 @@ function App() {
         <Route path="/caseLogin" element={<CSLogin />} />
 
         <Route path="/navbar" element={<Navbar />} />
+        <Route path="/sidebar" element={<Sidebar />} />
+
+
+
 
 
 
