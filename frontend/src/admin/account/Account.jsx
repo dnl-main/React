@@ -24,16 +24,6 @@ const Account = () => {
     <div className="account">
       <Navbar />
       <Sidebar />
-       {/* <div className="test-box">
-                <div className="test-green">
-                  
-                </div>
-                <div className="test-white">
-                  <img src={landing_dp_1} className="dp-test" alt="calendar icon" />
-                </div>
-              </div> */}
-
-
       <div className="account-box">
         <div className="account-box-in">
           <main className="account-box-in-card">

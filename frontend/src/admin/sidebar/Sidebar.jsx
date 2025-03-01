@@ -4,8 +4,9 @@ import House_01 from '../../assets/icons/House_01.svg';
 import Book from '../../assets/icons/Book.svg';
 import Notebook from '../../assets/icons/Notebook.svg';
 import Calendar from '../../assets/icons/Calendar.svg';
-import Users from '../../assets/icons/Users.svg';
 import concorde_logo from '../../assets/logo/concorde_logo.webp';
+
+import Users from '../../assets/icons/Users.svg?react';
 import Home from '../home/Home'
 import { Link } from 'react-router-dom';
 
@@ -29,7 +30,7 @@ const Sidebar = () => {
       </Link>
 
       <button>
-        <img src={Users} className="" alt="user icon" />
+        <Users style={{ width: "32px", height: "32px", color: "#00889a", strokeWidth: 2 }} />
       </button>
 
       <button>

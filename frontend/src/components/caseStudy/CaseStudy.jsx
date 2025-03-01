@@ -31,14 +31,6 @@ const CaseStudy = () => {
   }, []);
 
 
-
-
-
-
-
-
-
-
 const handleFileChange = (event) => {
   setSelectedFile(event.target.files[0]); 
 };
