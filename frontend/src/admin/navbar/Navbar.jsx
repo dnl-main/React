@@ -1,10 +1,12 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import './navbar.css';
-import Bell from '../../assets/icons/Bell.svg';
+
 import Search from '../../assets/icons/Search.svg';
 import Filter from '../../assets/icons/Filter.svg';
-import User_Circle from '../../assets/icons/User_Circle.svg';
+
+import Bell from '../../assets/icons/Bell.svg?react';
+import User_Circle from '../../assets/icons/User_Circle.svg?react';
 
 
 export const Navbar = () => {
@@ -29,12 +31,26 @@ export const Navbar = () => {
         </div> {/* navbar-main-search */}
 
         <div className="navbar-main-notification">
-          <img src={Bell} className="" alt="Notification icon" />
+          <Bell 
+            style={{ 
+              color: "var(--primary-color)", 
+              width: "32px", 
+              height: "32px", 
+              "--stroke-width": "5px"  // ✅ This works!
+            }} 
+          />
         </div> {/* navbar-main-notification */}
 
         <div className="navbar-main-account">
-          <img src={User_Circle} className="" alt="nav account icon" />
-
+          
+        <User_Circle 
+          style={{ 
+            color: "var(--primary-color)", 
+            width: "32px", 
+            height: "32px", 
+            "--stroke-width": "5px"  // ✅ Adjust stroke width dynamically
+          }} 
+        />
         </div> {/* navbar-main-account */}
       </main> {/* navbar-main */}
     </nav>

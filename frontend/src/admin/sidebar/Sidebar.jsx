@@ -2,11 +2,12 @@ import React from 'react';
 import './sidebar.css';
 import House_01 from '../../assets/icons/House_01.svg';
 import Book from '../../assets/icons/Book.svg';
-import Notebook from '../../assets/icons/Notebook.svg';
+
 import Calendar from '../../assets/icons/Calendar.svg';
 import concorde_logo from '../../assets/logo/concorde_logo.webp';
 
 import Users from '../../assets/icons/Users.svg?react';
+import Notebook from '../../assets/icons/Notebook.svg?react';
 import Home from '../home/Home'
 import { Link } from 'react-router-dom';
 
@@ -38,7 +39,15 @@ const Sidebar = () => {
       </button>
 
       <button>
-        <img src={Notebook} className="" alt="certificate icon" />
+      <Notebook 
+        style={{ 
+          color: "var(--primary-color)", 
+          width: "32px", 
+          height: "32px", 
+          "--stroke-width": "4px"  // ✅ Adjust stroke width dynamically
+        }} 
+      />
+
       </button>
 
       <button>  

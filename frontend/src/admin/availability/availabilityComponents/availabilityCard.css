@@ -1,0 +1,196 @@
+.availability-box-in-cards-card {
+	/* background-color: mediumseagreen; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: var(--white-color);
+	height: 20vh;
+	width: 100%;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px rgba(0, 136, 154, 0.10);
+}
+
+	.availability-box-in-cards-card-indicator {
+		background-color: var(--yellow-indicator-opacity-30);
+		height: 100%;
+		width: 1.8%;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+
+	.availability-box-in-cards-card-profile {
+		/* background-color: forestgreen; */
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
+		height: 100%;
+		width: 32.2%;
+		padding-left: 2vw;
+		column-gap: 1vw;
+	}
+
+		.availability-box-in-cards-card-profile-svg {
+			color: lightblue;
+			width: 72px; 
+			height: 72px;
+		}
+
+		.availability-box-in-cards-card-profile-info {
+			/* background-color: limegreen; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			row-gap: 2vh;
+		}
+			.availability-box-in-cards-card-profile-info-text {
+				/* background-color: lightgreen; */
+				font-weight: var(--font-weight-regular);
+				font-size: var(--font-size-16);
+				color: var(--black-color);
+			}
+			.availability-box-in-cards-card-profile-info-job {
+				/* background-color: honeydew; */
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-color: var(--secondary-color-opacity-60);
+				column-gap: 0.6vw;
+				padding: 1vh 1vw;
+				border-radius: 8px;
+				border: 2px solid var(--primary-color-opacity-15);
+			}
+				.availability-box-in-cards-card-profile-info-job p {
+					font-weight: var(--font-weight-medium);
+					font-size: var(--font-size-16);
+					color: var(--black-color);
+				}
+	.availability-box-in-cards-card-contact {
+		/* background-color: darkslategray; */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		height: 100%;
+		width: 18%;
+		row-gap: 2vh;
+	}
+		.availability-box-in-cards-card-contact p {
+			font-weight: var(--font-weight-light);
+			font-size: var(--font-size-12);
+			color: var(--black-color);
+		}
+		.availability-box-in-cards-card-contact-mobile {
+			/* background-color: slategray; */
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			column-gap: 1vw;
+		} 
+			.availability-box-in-cards-card-contact-mobile-svg {
+				color: var(--black-color);
+				width: 20px;
+				height: 20px;
+			}
+		.availability-box-in-cards-card-contact-email {
+			/* background-color: lightslategray; */
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			column-gap: 1vw;
+		}
+			.availability-box-in-cards-card-contact-email-svg {
+				color: var(--black-color);
+				width: 20px;
+				height: 20px;
+			}
+	.availability-box-in-cards-card-availability {
+		/* background-color: darkorange; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 20%;
+	}
+		.availability-box-in-cards-card-availability-bg {
+			/* background-color: lightpink; */
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--yellow-indicator-opacity-30);
+			height: 7vh;
+			width: 13vw;
+			/* padding: 1vh 1vw; */
+			column-gap: 0.7vw;
+			border-radius: 500px;
+		}
+
+					.availability-box-in-cards-card-availability-bg p {
+						font-weight: var(--font-weight-medium);
+						font-size: var(--font-size-16);
+						color: var(--black-color);
+					}
+
+			.availability-box-in-cards-card-certificate {
+				/* background-color: coral; */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: var(--secondary-color-opacity-60);
+				height: 100%;
+				width: 20%;
+				border-left: 3px solid var(--primary-color-opacity-15);  
+				border-right: 3px solid var(--primary-color-opacity-15); 
+				box-sizing: border-box;
+			}
+				.availability-box-in-cards-card-certificate button {
+					background-color: lightpink;
+					all: unset;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					column-gap: 0.4vw;
+					cursor: pointer;
+				}
+				.availability-box-in-cards-card-certificate-svg {
+					color: var(--red-indicator);
+					width: 32px;
+					height: 32px;
+				}
+				
+					.availability-box-in-cards-card-certificate button p {
+						font-weight: var(--font-weight-medium);
+						font-size: var(--font-size-16);
+						color: var(--red-indicator);
+					}
+			.availability-box-in-cards-card-button {
+				/* background-color: lightcoral; */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				width: 8%;
+			} 
+
+				.availability-box-in-cards-card-button button {
+					/* background-color: lightpink; */
+					all: unset;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: var(--primary-color);
+					min-height: 60px;
+					min-width: 60px;
+					border-radius: 500px;
+				} 
+
+					.availability-box-in-cards-card-button-svg {
+						color: var(--white-color);
+						width: 40px;
+						height: 40px;
+					}

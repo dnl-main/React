@@ -1,139 +1,87 @@
 import React from 'react';
 import './schedule.css';
 
+import Notebook from '../../assets/icons/Notebook.svg?react';
+import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
+
 const Schedule = () => {
   return (
-    <div className="scheduled_appointment">
-      <div className="scheduled_appointment-header">
-        <img src="" className="Crew" alt="scheduled Icon" />
-        <p className="scheduled_appointment-header-text">Scheduled Appointments</p>
-      </div>
+  	<div className="schedule">
+    <div className="schedule-box">
+			<main className="schedule-box-in">
+				<header className="schedule-header">
+					<Notebook 
+						style={{ 
+							color: "var(--black-color)", 
+							width: "32px", 
+							height: "32px", 
+							"--stroke-width": "4px" 
+						}} 
+					/>
+					<p>Scheduled appointments</p> 
+				</header> {/* schedule-header */}
+				<section className="schedule-tabs">
+					<button className="schedule-tabs-all">
+						<Circle_Primary style={{ color: "var(--white-color)", width: "20px", height: "20px" }} />
+						<p>All</p>
+					</button> {/* schedule-tabs-all */}
 
-      <div className="scheduled_appointment-tabs">
-        <div className="scheduled_appointment-tabs-all">
-          <img src="" className="Crew" alt="all Icon" />
-          <p className="scheduled_appointment-tabs-all-text">All</p>
-        </div>
+					<button className="schedule-tabs-today">
+						<Circle_Primary style={{ color: "var(--primary-color)", width: "20px", height: "20px" }} />
+						<p>Today</p>
+					</button> {/* schedule-tabs-today */}
 
-        <div className="scheduled_appointment-tabs-today">
-          <img src="" className="Crew" alt="today Icon" />
-          <p className="scheduled_appointment-tabs-today-text">Today</p>
-        </div>
+					<button className="schedule-tabs-upcoming">
+						<Circle_Primary style={{ color: "var(--primary-color)", width: "20px", height: "20px" }} />
+						<p>Upcoming</p>
+					</button> {/* schedule-tabs-upcoming */}
 
-        <div className="scheduled_appointment-tabs-upcoming">
-          <img src="" className="Crew" alt="upcoming Icon" />
-          <p className="scheduled_appointment-tabs-upcoming-text">Upcoming</p>
-        </div>
+					<button className="schedule-tabs-completed">
+						<Circle_Primary style={{ color: "var(--primary-color)", width: "20px", height: "20px" }} />
+						<p>Completed</p>
+					</button> {/* schedule-tabs-completed */}
+				</section> {/* schedule-tabs */}
 
-        <div className="scheduled_appointment-tabs-completed">
-          <img src="" className="Crew" alt="completed Icon" />
-          <p className="scheduled_appointment-tabs-completed-text">Completed</p>
-        </div>
-      </div>
+				<section className="schedule-today">
+					<header className="schedule-today-header">
+						<p>Today</p>
+					</header> {/* schedule-today-header */}
 
-      <p className="scheduled_appointment-today">Today</p>
+					<main className="schedule-today-cards">
+						<div className="schedule-today-cards-indicator">
+						</div> {/* schedule-today-cards-indicator */}
 
+						<div className="schedule-today-cards-date">
+						</div> {/* schedule-today-cards-date */}
 
+						<div className="schedule-today-cards-separator">
+						</div> {/* schedule-today-cards-separator */}
 
-{/*  */}
-      <div className="scheduled_appointment-today-cards">
-        <div className="scheduled_appointment-today-cards-container">
-          <div className="scheduled_appointment-today-cards-indicator">
-          </div>
+						<div className="schedule-today-cards-time">
+						</div> {/* schedule-today-cards-time*/}
 
-          <div className="scheduled_appointment-today-cards-date">
-            <p className="scheduled_appointment-today-cards-date-day">Mon</p>
-            <p className="scheduled_appointment-today-cards-date-date">28</p>
-          </div>
+						<div className="schedule-today-cards-profile">
+						</div> {/* schedule-today-cards-profile */}
 
-          <div className="scheduled_appointment-today-cards-separator">
-          </div>
+						<div className="schedule-today-cards-contact">
+						</div> {/* schedule-today-cards-contact */}
 
-          <div className="scheduled_appointment-today-cards-time">
-            <p className="scheduled_appointment-today-cards-time-from">10:30 AM</p>
-            <p className="scheduled_appointment-today-cards-time-to">To 11:00 AM</p>
-          </div>
+						<div className="schedule-today-cards-button">
+						</div> {/* schedule-today-cards-button */}
+					</main> {/* schedule-today-cards */}
+				</section> {/* schedule-today */}
 
-          <div className="scheduled_appointment-today-cards-profile">
-            <img src="" className="aica" alt="Profile Picture" />
-            <div className="scheduled_appointment-today-cards-profile-details">
-              <p className="scheduled_appointment-today-cards-profile-details-name">Juan A. Dela Cruz</p>
-              <div className="scheduled_appointment-today-cards-profile-details-container">
-                <img src="" className="aica" alt="Job Icon" />
-                <p className="scheduled_appointment-today-cards-profile-details-container-position">Trainee 4th Engineer</p>
-              </div>
-            </div>
-          </div>
+				<section className="schedule-completed">
+					<header className="schedule-completed-header">
+						<p>Completed</p>
+					</header> {/* schedule-completed-header */}
 
-          <div className="scheduled_appointment-today-cards-contact">
-            <div className="scheduled_appointment-today-cards-mobile">
-              <img src="" className="aica" alt="Phone Icon" />
-              <p className="scheduled_appointment-today-cards-mobile-text">+63 921-684-7777</p>
-            </div>
-            <div className="scheduled_appointment-today-cards-email">
-              <img src="" className="aica" alt="Email Icon" />
-              <p className="scheduled_appointment-today-cards-email-text">juandelacruz@gmail.com</p>
-            </div>
-          </div>
-
-          <div className="scheduled_appointment-today-cards-button">
-            <img src="" className="aica" alt="Edit Icon" />
-          </div>
-        </div>
-      </div>
-{/*  */}
-
-
-
-
-      <p className="scheduled_appointment-completed">Completed</p>
-
-      <div className="scheduled_appointment-completed-cards">
-        <div className="scheduled_appointment-completed-cards-container">
-          <div className="scheduled_appointment-completed-cards-indicator">
-          </div>
-
-          <div className="scheduled_appointment-completed-cards-date">
-            <p className="scheduled_appointment-completed-cards-date-day">Mon</p>
-            <p className="scheduled_appointment-completed-cards-date-date">28</p>
-          </div>
-
-          <div className="scheduled_appointment-completed-cards-separator">
-          </div>
-
-          <div className="scheduled_appointment-completed-cards-time">
-            <p className="scheduled_appointment-completed-cards-time-from">10:30 AM</p>
-            <p className="scheduled_appointment-completed-cards-time-to">To 11:00 AM</p>
-          </div>
-
-          <div className="scheduled_appointment-completed-cards-profile">
-            <img src="" className="aica" alt="Profile Picture" />
-            <div className="scheduled_appointment-completed-cards-profile-details">
-              <p className="scheduled_appointment-completed-cards-profile-details-name">Juan A. Dela Cruz</p>
-              <div className="scheduled_appointment-completed-cards-profile-details-container">
-                <img src="" className="aica" alt="Job Icon" />
-                <p className="scheduled_appointment-completed-cards-profile-details-container-position">Trainee 4th Engineer</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="scheduled_appointment-completed-cards-contact">
-            <div className="scheduled_appointment-completed-cards-mobile">
-              <img src="" className="aica" alt="Phone Icon" />
-              <p className="scheduled_appointment-completed-cards-mobile-text">+63 921-684-7777</p>
-            </div>
-            <div className="scheduled_appointment-completed-cards-email">
-              <img src="" className="aica" alt="Email Icon" />
-              <p className="scheduled_appointment-completed-cards-email-text">juandelacruz@gmail.com</p>
-            </div>
-          </div>
-
-          <div className="scheduled_appointment-completed-cards-button">
-            <img src="" className="aica" alt="Edit Icon" />
-          </div>
-        </div>
-      </div>      
-    </div>
+					<main className="schedule-completed-cards">
+					</main> {/* schedule-completed-cards */}
+				</section> {/* schedule-completed */}
+			</main> {/* schedule-box-in */}
+    </div> {/* schedule-box */}
+  	</div>
   );
 };
 

@@ -40,7 +40,7 @@
 			flex-direction: row;
 			height: 70%;
 			width: 40%;
-			background-color: var(--primary-color-opacity-15);
+			background-color: var(--primary-color-opacity-10);
 			border-radius: 12px;
 		}
 			.navbar-main-search-left {
@@ -93,10 +93,7 @@
 			background-color: var(--white-color);
 			border-radius: 100px;
 		}
-			.navbar-main-notification img {
-				height: 32px;
-				width: auto;
-			}
+
 		.navbar-main-account {
 			display: flex;
 			justify-content: center;
@@ -106,7 +103,3 @@
 			background-color: var(--white-color);
 			border-radius: 100px;
 		}
-			.navbar-main-account img {
-				height: 32px;
-				width: auto;
-			}
