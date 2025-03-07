@@ -1,3 +1,139 @@
-.schedule {
-    background-color: blue;
+.schedule {  
+  background-color: darkslategray; 
 }
+
+.schedule-box {  
+  background-color: slategray; 
+}
+
+.schedule-box-in {  
+  background-color: lightslategray; 
+}
+
+  .schedule-header {  
+    background-color: darkblue; 
+  }
+
+  .schedule-tabs {  
+    background-color: navy; 
+  }
+
+    .schedule-tabs-all {  
+      background-color: royalblue; 
+    }
+
+    .schedule-tabs-today {  
+      background-color: dodgerblue; 
+    }
+
+    .schedule-tabs-upcoming {  
+      background-color: skyblue; 
+    }
+
+    .schedule-tabs-completed {  
+      background-color: lightblue; 
+    }
+
+  .schedule-today {  
+    background-color: darkgreen; 
+  }
+
+    .schedule-today-header {  
+      background-color: forestgreen; 
+    }
+
+    .schedule-today-cards {  
+      background-color: mediumseagreen; 
+    }
+
+      .schedule-today-cards-card {  
+        background-color: seagreen; 
+      }
+
+        .schedule-today-cards-card-indicator {  
+          background-color: palegreen; 
+        }
+
+        .schedule-today-cards-card-date {  
+          background-color: darkolivegreen; 
+        }
+
+          .schedule-today-cards-card-date-day {  
+            background-color: olive; 
+          }
+
+          .schedule-today-cards-card-date-date {  
+            background-color: yellowgreen; 
+          }
+
+        .schedule-today-cards-card-separator {  
+          background-color: greenyellow; 
+        }
+
+        .schedule-today-cards-card-time {  
+          background-color: lawngreen; 
+        }
+
+          .schedule-today-cards-card-time-start {  
+            background-color: chartreuse; 
+          }
+
+          .schedule-today-cards-card-time-end {  
+            background-color: lightgreen; 
+          }
+
+        .schedule-today-cards-card-profile {  
+          background-color: darkred; 
+        }
+
+          .schedule-today-cards-card-profile-svg {  
+            background-color: crimson; 
+          }
+
+          .schedule-today-cards-card-profile-info {  
+            background-color: firebrick; 
+          }
+
+            .schedule-today-cards-card-profile-info-text {  
+              background-color: indianred; 
+            }
+
+            .schedule-today-cards-card-profile-info-job {  
+              background-color: lightcoral; 
+            }
+
+        .schedule-today-cards-card-contact {  
+          background-color: darkgoldenrod; 
+        }
+
+          .schedule-today-cards-card-contact-mobile {  
+            background-color: goldenrod; 
+          }
+
+            .schedule-today-cards-card-contact-mobile-svg {  
+              background-color: gold; 
+            }
+
+          .schedule-today-cards-card-contact-email {  
+            background-color: sienna; 
+          }
+
+            .schedule-today-cards-card-contact-email-svg {  
+              background-color: peru; 
+            }
+
+        .schedule-today-cards-card-button {  
+          background-color: darkorange; 
+        }
+
+  .schedule-completed {  
+    background-color: indigo; 
+  }
+
+    .schedule-completed-header {  
+      background-color: mediumpurple; 
+    }
+
+    .schedule-completed-cards {  
+      background-color: plum; 
+    }

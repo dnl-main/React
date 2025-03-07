@@ -8,9 +8,10 @@ import Phone from '../../assets/icons/Phone.svg';
 import Mail from '../../assets/icons/Mail.svg';
 import Suitcase from '../../assets/icons/Suitcase.svg';
 import Edit_Pencil_Line_01 from '../../assets/icons/Edit_Pencil_Line_01.svg';
-import Edit_Pencil_01 from '../../assets/icons/Edit_Pencil_01.svg';
 import User_Square from '../../assets/icons/User_Square.svg';
 import Calendar_Week from '../../assets/icons/Calendar_Week.svg';
+
+import Edit_Pencil_01 from '../../assets/icons/Edit_Pencil_01.svg?react';
 
 
 
@@ -22,6 +23,7 @@ import LabelIcon from '../../assets/icons/Label.svg?react';
 const Account = () => {
   return (
     <div className="account">
+      
       <Navbar />
       <Sidebar />
       <div className="account-box">
@@ -78,7 +80,7 @@ const Account = () => {
                     </button>
 
                     <button className="account-box-in-card-main-info-right-buttons-profile">
-                      <img src={Edit_Pencil_01} className="" alt="calendar icon" />
+                      <Edit_Pencil_01 style={{ color: "var(--white-color)", width: "24px", height: "24px", "--stroke-width": "2px" }} />
                       <p>Edit profile</p>
                     </button>
                   </div> {/* account-box-in-card-main-info-right-buttons */}
