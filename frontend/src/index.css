@@ -63,6 +63,16 @@
   --yellow-indicator-opacity-30: rgba(255, 220, 108, 0.3); 
   --blue-indicator-opacity-30: rgba(76, 121, 211, 0.3); 
 
+  --red-indicator-opacity-45: rgba(250, 100, 100, 0.45);
+  --green-indicator-opacity-45: rgba(54, 192, 129, 0.45);
+  --yellow-indicator-opacity-45: rgba(255, 220, 108, 0.45); 
+  --blue-indicator-opacity-45: rgba(76, 121, 211, 0.45); 
+
+  --red-indicator-opacity-60: rgba(250, 100, 100, 0.6);
+  --green-indicator-opacity-60: rgba(54, 192, 129, 0.6);
+  --yellow-indicator-opacity-60: rgba(255, 220, 108, 0.6); 
+  --blue-indicator-opacity-60: rgba(76, 121, 211, 0.6); 
+
   /* Font settings */
   --font-family: 'Inter', sans-serif;
   --font-accent: "Bricolage Grotesque", serif;

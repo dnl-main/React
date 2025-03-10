@@ -1,0 +1,211 @@
+.schedule-today-cards-card {  
+	/* background-color: seagreen;  */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: var(--white-color);
+	height: 20vh;
+	width: 100%;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px rgba(0, 136, 154, 0.10);
+}
+
+	.schedule-today-cards-card-indicator {  
+		/* background-color: palegreen;  */
+		height: 100%;
+		width: 1.8%;
+		background-color: var(--green-indicator-opacity-60);
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+
+	.schedule-today-cards-card-date {  
+		/* background-color: darkolivegreen;  */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 12%;
+		line-height: 1;
+	}
+
+		.schedule-today-cards-card-date-day {  
+			/* background-color: olive;  */
+			font-weight: var(--font-weight-regular);
+			font-size: var(--font-size-24);
+			color: var(--black-color);
+		}
+
+		.schedule-today-cards-card-date-date {  
+			/* background-color: yellowgreen;  */
+			font-weight: var(--font-weight-semibold);
+			font-size: var(--font-size-44);
+			color: var(--black-color);
+		}
+
+	.schedule-today-cards-card-separator {  
+		/* background-color: greenyellow;  */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 4%;
+	}
+
+		.schedule-today-cards-card-separator-line {  
+			/* background-color: red;  */
+			height: 68%;
+			width: 4%;
+			background-color: var(--primary-color-opacity-15);
+			border-radius: 500px;
+		}
+
+	.schedule-today-cards-card-time {  
+		/* background-color: lawngreen;  */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		height: 100%;
+		width: 16%;
+		padding-left: 3%;
+	}
+
+		.schedule-today-cards-card-time-start {  
+			/* background-color: chartreuse;  */
+			font-weight: var(--font-weight-semibold);
+			font-size: var(--font-size-20);
+			color: var(--black-color);
+		}
+
+		.schedule-today-cards-card-time-end {  
+			/* background-color: lightgreen;  */
+			font-weight: var(--font-weight-light);
+			font-size: var(--font-size-12);
+			color: var(--black-color-opacity-45);
+		}
+
+	.schedule-today-cards-card-profile {  
+		/* background-color: darkred;  */
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
+		height: 100%;
+		width: 36.2%;
+		padding-left: 2vw;
+		column-gap: 1vw;
+	}
+
+		.schedule-today-cards-card-profile-svg {  
+			/* background-color: crimson;  */
+			width: 72px; 
+			height: 72px;
+		}
+
+		.schedule-today-cards-card-profile-info {  
+			/* background-color: firebrick;  */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			row-gap: 2vh;
+		}
+
+			.schedule-today-cards-card-profile-info-text {  
+				/* background-color: indianred;  */
+				font-weight: var(--font-weight-regular);
+				font-size: var(--font-size-16);
+				color: var(--black-color);
+			}
+
+			.schedule-today-cards-card-profile-info-job {  
+				/* background-color: lightcoral;  */
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-color: var(--secondary-color-opacity-60);
+				column-gap: 0.6vw;
+				padding: 1vh 1vw;
+				border-radius: 8px;
+				border: 2px solid var(--primary-color-opacity-15);
+			}
+
+				.schedule-today-cards-card-profile-info-job p {
+					font-weight: var(--font-weight-medium);
+					font-size: var(--font-size-16);
+					color: var(--black-color);
+				}
+
+	.schedule-today-cards-card-contact {  
+		/* background-color: darkgoldenrod;  */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		height: 100%;
+		width: 22%;
+		row-gap: 2vh;
+	}
+
+		.schedule-today-cards-card-contact p {
+			font-weight: var(--font-weight-light);
+			font-size: var(--font-size-12);
+			color: var(--black-color);
+		}
+
+		.schedule-today-cards-card-contact-mobile {  
+			/* background-color: goldenrod;  */
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			column-gap: 1vw;
+		}
+
+			.schedule-today-cards-card-contact-mobile-svg {  
+				/* background-color: gold;  */
+				color: var(--black-color);
+				width: 20px;
+				height: 20px;
+			}
+
+		.schedule-today-cards-card-contact-email {  
+			/* background-color: sienna;  */
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			column-gap: 1vw;
+		}
+
+			.schedule-today-cards-card-contact-email-svg {  
+				/* background-color: peru;  */
+				color: var(--black-color);
+				width: 20px;
+				height: 20px;
+			}
+
+	.schedule-today-cards-card-button {  
+		/* background-color: darkorange;  */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 8%;
+	}
+
+		.schedule-today-cards-card-button button {
+			/* background-color: lightpink; */
+			all: unset;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--primary-color);
+			min-height: 60px;
+			min-width: 60px;
+			border-radius: 500px;
+		} 
