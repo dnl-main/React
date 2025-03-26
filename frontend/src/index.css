@@ -87,6 +87,8 @@
   --font-weight-black: 900;
  
   /* Font sizes */
+  --font-size-4: 0.333rem;    /* 4px */
+  --font-size-8: 0.667rem;    /* 8px */
   --font-size-12: 1rem;       /* 12px */
   --font-size-16: 1.333rem;   /* 16px */
   --font-size-20: 1.667rem;   /* 20px */
@@ -116,25 +118,9 @@
 }
 
 /* Ensure the design screen size is respected */
-body {
+/* body {
   font-family: var(--font-family);
-}
+} */
 
 
 
-/* Example usage of spacing 
-.container {
-  padding: calc(4 * var(--spacing-unit));  16px padding
-  margin: calc(2 * var(--spacing-unit)); 8px margin
-}
-
-Example typography 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-bold);
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-*/
