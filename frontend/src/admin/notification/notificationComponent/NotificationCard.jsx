@@ -4,6 +4,9 @@ import './notificationCard.css';
 import Calendar_Event from '../../../assets/icons/Calendar_Event.svg?react';
 import Circle_Primary from '../../../assets/icons/Circle_Primary.svg?react';
 import Edit_Pencil_01 from '../../../assets/icons/Edit_Pencil_01.svg?react';
+import Calendar_Week from '../../../assets/icons/Calendar_Week.svg?react';
+import Clock from '../../../assets/icons/Clock.svg?react';
+
 
 const NotificationCard = () => {
   return (
@@ -28,14 +31,13 @@ const NotificationCard = () => {
 
                 <div className="notification-cards-card-info-details-box">
                   <div className="notification-cards-card-info-details-box-date">
-                    <Calendar_Event 
-                      style={{ 
-                        color: "var(--black-color-opacity-60)", 
-                        width: "24px", 
-                        height: "24px", 
-                        "--stroke-width": "4px" 
-                      }} 
-                    />
+                    
+                    <Calendar_Week style={{  
+                      width: "24px", 
+                      height: "24px", 
+                      '--stroke-width': '2px',
+                      '--stroke-color': 'var(--black-color-opacity-30)'
+                    }} />
                     <div className="notification-cards-card-info-details-box-date-day">
                       <p className="notification-cards-card-info-details-box-date-day-day">Monday</p>
                       <p className="notification-cards-card-info-details-box-date-day-date">DEC-28-2024</p>
@@ -43,14 +45,12 @@ const NotificationCard = () => {
                   </div> {/* notification-cards-card-info-details-box-date */}
 
                   <div className="notification-cards-card-info-details-box-start">
-                    <Calendar_Event 
-                      style={{ 
-                        color: "var(--black-color-opacity-60)", 
-                        width: "24px", 
-                        height: "24px", 
-                        "--stroke-width": "4px" 
-                      }} 
-                    />
+                    <Clock style={{ 
+                      width: "24px", 
+                      height: "24px", 
+                      '--stroke-color': 'var(--black-color-opacity-30)', 
+                      '--stroke-width': '5px' 
+                    }} />
                     <div className="notification-cards-card-info-details-box-start-time">
                       <p className="notification-cards-card-info-details-box-start-time-text">Starts at</p>
                       <p className="notification-cards-card-info-details-box-start-time-date">11:30 AM</p>
@@ -58,14 +58,12 @@ const NotificationCard = () => {
                   </div> {/* notification-cards-card-info-details-box-start */}
 
                   <div className="notification-cards-card-info-details-box-end">
-                    <Calendar_Event 
-                      style={{ 
-                        color: "var(--black-color-opacity-60)", 
-                        width: "24px", 
-                        height: "24px", 
-                        "--stroke-width": "4px" 
-                      }} 
-                    />
+                    <Clock style={{ 
+                      width: "24px", 
+                      height: "24px", 
+                      '--stroke-color': 'var(--black-color-opacity-30)', 
+                      '--stroke-width': '5px' 
+                    }} />
                     <div className="notification-cards-card-info-details-box-end-time">
                       <p className="notification-cards-card-info-details-box-end-time-text">Ends at</p>
                       <p className="notification-cards-card-info-details-box-end-time-date">12:00 PM</p>

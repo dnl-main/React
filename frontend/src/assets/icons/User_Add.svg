@@ -1,0 +1,17 @@
+<svg 
+  class="customizable-svg" 
+  width="80" 
+  height="80" 
+  viewBox="0 0 80 80" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path 
+    class="svg-path" 
+    d="M50 63.3333C50 55.9695 41.0457 50 30 50C18.9543 50 10 55.9695 10 63.3333M63.3333 53.3333V43.3333M63.3333 43.3333V33.3333M63.3333 43.3333H53.3333M63.3333 43.3333H73.3333M30 40C22.6362 40 16.6667 34.0304 16.6667 26.6666C16.6667 19.3028 22.6362 13.3333 30 13.3333C37.3638 13.3333 43.3333 19.3028 43.3333 26.6666C43.3333 34.0304 37.3638 40 30 40Z" 
+    stroke="var(--stroke-color, #14181F)" 
+    stroke-width="var(--stroke-width, 4)" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+</svg>

@@ -1,11 +1,11 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22.667 24C22.667 24.7364 23.2639 25.3334 24.0003 25.3334C24.7367 25.3334 25.3337 24.7364 25.3337 24C25.3337 23.2636 24.7367 22.6667 24.0003 22.6667C23.2639 22.6667 22.667 23.2636 22.667 24Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.667 24C14.667 24.7364 15.2639 25.3334 16.0003 25.3334C16.7367 25.3334 17.3337 24.7364 17.3337 24C17.3337 23.2636 16.7367 22.6667 16.0003 22.6667C15.2639 22.6667 14.667 23.2636 14.667 24Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.66699 24C6.66699 24.7364 7.26395 25.3334 8.00033 25.3334C8.73671 25.3334 9.33366 24.7364 9.33366 24C9.33366 23.2636 8.73671 22.6667 8.00033 22.6667C7.26395 22.6667 6.66699 23.2636 6.66699 24Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22.667 16C22.667 16.7364 23.2639 17.3334 24.0003 17.3334C24.7367 17.3334 25.3337 16.7364 25.3337 16C25.3337 15.2636 24.7367 14.6667 24.0003 14.6667C23.2639 14.6667 22.667 15.2636 22.667 16Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.667 16C14.667 16.7364 15.2639 17.3334 16.0003 17.3334C16.7367 17.3334 17.3337 16.7364 17.3337 16C17.3337 15.2636 16.7367 14.6667 16.0003 14.6667C15.2639 14.6667 14.667 15.2636 14.667 16Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.66699 16C6.66699 16.7364 7.26395 17.3334 8.00033 17.3334C8.73671 17.3334 9.33366 16.7364 9.33366 16C9.33366 15.2636 8.73671 14.6667 8.00033 14.6667C7.26395 14.6667 6.66699 15.2636 6.66699 16Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22.667 8.00002C22.667 8.7364 23.2639 9.33335 24.0003 9.33335C24.7367 9.33335 25.3337 8.7364 25.3337 8.00002C25.3337 7.26364 24.7367 6.66669 24.0003 6.66669C23.2639 6.66669 22.667 7.26364 22.667 8.00002Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.667 8.00002C14.667 8.7364 15.2639 9.33335 16.0003 9.33335C16.7367 9.33335 17.3337 8.7364 17.3337 8.00002C17.3337 7.26364 16.7367 6.66669 16.0003 6.66669C15.2639 6.66669 14.667 7.26364 14.667 8.00002Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.66699 8.00002C6.66699 8.7364 7.26395 9.33335 8.00033 9.33335C8.73671 9.33335 9.33366 8.7364 9.33366 8.00002C9.33366 7.26364 8.73671 6.66669 8.00033 6.66669C7.26395 6.66669 6.66699 7.26364 6.66699 8.00002Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--black-color); --stroke-width: 4px;">
+  <circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="8" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="8" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="8" cy="16" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="16" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="16" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="8" cy="24" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="24" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="24" r="2" stroke="currentColor" stroke-width="var(--stroke-width)" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

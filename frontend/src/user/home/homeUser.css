@@ -1,266 +1,179 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f9fc;
-    color: #333;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+.homeUser{ 
+	background-color: darkred; 
+	max-height: 100vh;
+  max-width: 100vw;
+} 
+.homeUser-box { 
+	background-color: firebrick;
+	height: 100%;
+  width: 100%;
+  padding-top: 72px;
+  padding-left: 72px;
+} 
+.homeUser-box-in { 
+	background-color: indianred;
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  background-color: var(--secondary-color);
+  padding: 40px;
+  row-gap: 6vh;   
+} 
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
+.homeUser-top { 
+	background-color: lightcoral; 
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 64vh;
+} 
+  .homeUser-top-header { background-color: salmon; 
+		display: flex;
+		justify-content: space-between;
+		
+	} 
+    .homeUser-top-header-left { background-color: lightsalmon; 
+			display: flex;
+			align-items: center;
+			font-weight: var(--font-weight-medium);
+      font-size: var(--font-size-24);
+      color: var(--black-color);
+			
+		} 
+    .homeUser-top-header-right { background-color: mistyrose; 
+			display: flex;
+			align-items: center;
+			font-weight: var(--font-weight-medium);
+      font-size: var(--font-size-16);
+      color: var(--black-color);
+		
+		} 
 
-.home-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    color: #00899A;
-}
+			.homeUser-top-header-right-status {
+				background-color: var(--white-color);
+				padding: 0.8vh;
+				border-radius: 500px;
 
-.home-icon i {
-    font-size: 24px;
-}
+			}
+				.homeUser-top-header-right-status-in {
+					background-color: var(--green-indicator-opacity-30);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					column-gap: 1vh;
+					padding: 1vh 2vh;
+					border-radius: 500px;
+				}
 
-.status-indicator {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    color: #00899A;
-}
+			.homeUser-top-header-right-btn {
+				background-color: slategrey;
+				all: unset;
+				background-color: var(--white-color);
+				width: 8vh;
+				height: 7.8 vh;
+				border-radius: 500px;
+			}
+  .homeUser-top-core { background-color: darkgreen; 
+		display: flex;
+		
+	} 
+    .homeUser-top-core-left { background-color: forestgreen; 
+			display: flex;
+			flex-direction: column;
+		} 
+      .homeUser-top-core-left-header { background-color: mediumseagreen; 
+				display: flex;
+				
+			} 
+      .homeUser-top-core-left-heading { background-color: palegreen; } 
 
-.status-indicator i {
-    font-size: 18px;
-}
+      .homeUser-top-core-left-date { background-color: lightgreen; 
+				display: flex;
+				
+			} 
+        .homeUser-top-core-left-date-cal { background-color: honeydew; 
+					display: flex;
+					flex-direction: column;
+				} 
+        .homeUser-top-core-left-date-data { background-color: darkblue; } 
+          .homeUser-top-core-left-date-data-text { background-color: dodgerblue; } 
+            .homeUser-top-core-left-date-data-text-regular { background-color: deepskyblue; } 
+            .homeUser-top-core-left-date-data-text-light { background-color: lightskyblue; }
 
-/* Main Content */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+          .homeUser-top-core-left-date-data-cards { background-color: darkorange; 
+						display: flex;
+						
+					} 
+            .homeUser-top-core-left-date-data-cards-start { background-color: orange; 
+							display: flex;
+							
+						} 
 
+              .homeUser-top-core-left-date-data-cards-start-text { background-color: lightyellow; } 
 
-.card {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-}
+            .homeUser-top-core-left-date-data-cards-end { background-color: gold;
+							display: flex; 
+							
+						} 
 
-.card h3 {
-    margin-bottom: 15px;
-    color: #444;
-}
-.scheduled-certificate-wrapper {
-    display: flex;
-    justify-content: space-between; /* Aligns containers side by side with space between */
-    gap: 20px; /* Adds spacing between containers */
-}
+              .homeUser-top-core-left-date-data-cards-end-text { background-color: lightgoldenrodyellow; }
 
-/* Scheduled Container */
-.scheduled-appointment {
-    flex: 1; /* Ensures equal width */
-    max-width: 48%; /* Prevents them from being too wide */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
+      .homeUser-top-core-left-btn { background-color: darkviolet; 
+				display: flex;
+				
+			} 
+    .homeUser-top-core-right { background-color: darkslateblue;
+			display: flex;
+			flex-direction: column;
+		 } 
+      .homeUser-top-core-right-header { background-color: slateblue; 
+				display: flex;
+				
+			} 
+      .homeUser-top-core-right-progress { background-color: mediumslateblue; 
+				display: flex;
+				flex-direction: column;
+			} 
+        .homeUser-top-core-right-progress-text { background-color: lightsteelblue;
+					display: flex;
+					flex-direction: column;
+				 } 
+          .homeUser-top-core-right-progress-text-box { background-color: lightslategray; 
+						display: flex;
+					} 
+        .homeUser-top-core-right-progress-bar { background-color: darkkhaki; } 
+          .homeUser-top-core-right-progress-bar-primary { background-color: khaki; } 
 
-
-.scheduled-appointment i {
-    font-size: 40px; 
-    margin-left: 30px;
-    color: #00899A;
-}
-
-.scheduled-appointment .date {
-    font-size: 20px; 
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.scheduled-appointment .time {
-    font-size: 15px; 
-    color: #666;
-    gap: 5px;
-}
-
-.set-appointment {
-    padding: 5px 30px;
-    margin-left: 200px;
-    background-color: #00899A;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.set-appointment:hover {
-    background-color: #007788;
-}
-
-/* Certificate Container */
-.certificate-upload {
-    flex: 1; /* Ensures equal width */
-    max-width: 48%; /* Prevents them from being too wide */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-.certificate-upload .progress {
-    height: 100%;
-    background-color: #00899A;
-}
-
-.file-upload {
-    margin-top: 10px;
-}
-
-.file-upload select {
-    padding: 8px;
-    width: 100px;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-}
-
-.file-input {
-    margin-top: 10px;
-    border: 2px dashed #ddd;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.file-input label {
-    font-size: 14px;
-    color: #666;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.file-input input {
-    display: none;
-}
-
-.file-input:hover {
-    border-color: #00899A;
-}
-
-
-/* Notifications Container*/
-.notifications {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.notifications h3 {
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.notification-item {
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    gap: 15px;
-}
-
-.notification-item .profile-icon {
-    width: 50px;
-    height: 50px;
-    background-color: #ddd;
-    border-radius: 50%;
-}
-
-.notification-item .details {
-    flex: 1;
-}
-
-.notification-item .details p {
-    margin: 5px 0;
-    font-weight: 200;
-    color: #343a40;
-    font-size: 14px;
-}
-.notification-content .subtext {
-    display: flex;
-    gap: 10px;
-    color: #777;
-    font-family: sans-serif;
-    font-size: 14px;
-}
-.date-card,
-.start-time-card,
-.end-time-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 9px;
-    padding: 5px; /* Decrease padding for smaller height */
-    font-size: 12px; /* Slightly smaller text size */
-    color: #495057;
-    text-align: center;
-    flex: 1; /* Ensures cards stretch evenly */
-    min-width: 100px; /* Sets a smaller minimum width */
-    max-width: 190px; /* Prevents cards from being too wide */
-    gap: 5px;
-    
-}
-
-
-.notification-item .details .date-time {
-    display: flex;
-    gap: 15px;
-    color: #777;
-    font-family: sans-serif;
-    font-size: 14px;
-}
-
-.notification-item .details .date-time i {
-    margin-right: 5px;
-}
-
-.new-appointment {
-    margin-right: 200px;
-    padding: 8px 12px;
-    background-color: #F5F6FA;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.new-appointment:hover {
-    background-color: #007788;
-}
-
-.notification-item .status-icon {
-    font-size: 20px;
-    color: #00899A;
-}
-.check-icon {
-    color: #28a745;
-}
+      .homeUser-top-core-right-up { background-color: darkorchid; 
+				display: flex;
+			} 
+        .homeUser-top-core-right-up-desc { background-color: mediumorchid;
+					display: flex;
+					flex-direction: column;
+				 } 
+          .homeUser-top-core-right-up-desc-header { background-color: thistle;
+						display: flex;
+					 } 
+        .homeUser-top-core-right-up-btn { background-color: plum;
+					display: flex; 
+				} 
+					.homeUser-top-core-right-up-btn-header { background-color: plum;
+						display: flex; 
+					} 
+      .homeUser-top-core-right-down { background-color: darksalmon; 
+				display: flex;
+				flex-direction: column;
+			} 
+        .homeUser-top-core-right-down-text { background-color: lightpink; } 
+          .homeUser-top-core-right-down-text-bold { background-color: pink; } 
+          .homeUser-top-core-right-down-text-light { background-color: lavenderblush; } 
+        .homeUser-top-core-right-down-btn { background-color: lightcyan;
+					display: flex;
+				 } 

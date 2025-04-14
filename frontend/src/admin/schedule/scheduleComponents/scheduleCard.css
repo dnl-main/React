@@ -6,17 +6,20 @@
 	background-color: var(--white-color);
 	height: 20vh;
 	width: 100%;
-	border-radius: 20px;
+	border-radius: 12px;
+	/* !!! CHANGE ALL FROM 20PX TO 12PX */
 	box-shadow: 0px 0px 20px rgba(0, 136, 154, 0.10);
 }
 
 	.schedule-today-cards-card-indicator {  
 		/* background-color: palegreen;  */
 		height: 100%;
-		width: 1.8%;
+		width: 1.4%;
+		/* !!! CHANGE ALL FROM 1.8% TO 1.4% */
 		background-color: var(--green-indicator-opacity-60);
-		border-top-left-radius: 20px;
-		border-bottom-left-radius: 20px;
+		border-top-left-radius: 12px;
+		border-bottom-left-radius: 12px;
+		/* !!! CHANGE ALL FROM 20PX TO 12PX */
 	}
 
 	.schedule-today-cards-card-date {  
@@ -26,7 +29,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		width: 12%;
+		width: 12.4%;
 		line-height: 1;
 	}
 
@@ -71,6 +74,7 @@
 		height: 100%;
 		width: 16%;
 		padding-left: 3%;
+		row-gap: 1vh;
 	}
 
 		.schedule-today-cards-card-time-start {  

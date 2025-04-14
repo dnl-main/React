@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './sidebar.css';
 import House_01 from '../../assets/icons/House_01.svg';
-import Book from '../../assets/icons/Book.svg';
+
 
 import Calendar from '../../assets/icons/Calendar.svg';
 import concorde_logo from '../../assets/logo/concorde_logo.webp';
 
 import Users from '../../assets/icons/Users.svg?react';
 import Notebook from '../../assets/icons/Notebook.svg?react';
-import Home from '../home/Home'
-import { Link } from 'react-router-dom';
+import Book from '../../assets/icons/Book.svg?react';
+
+
 
 const Sidebar = () => {
   return (
@@ -30,30 +32,44 @@ const Sidebar = () => {
         </button>
       </Link>
 
-      <button>
-        <Users style={{ width: "32px", height: "32px", color: "#00889a", strokeWidth: 2 }} />
-      </button>
-
-      <button>
-        <img src={Calendar} className="" alt="calendar icon" />
-      </button>
-
-      <button>
-      <Notebook 
-        style={{ 
-          color: "var(--primary-color)", 
-          width: "32px", 
-          height: "32px", 
-          "--stroke-width": "4px"  // ✅ Adjust stroke width dynamically
-        }} 
-      />
-
-      </button>
-
-      <button>  
-        <img src={Book} className="" alt="scheduled appointment icon" />
-      </button>
       
+      <Link to="/availability">
+        <button>
+          <Users style={{ width: "32px", height: "32px", color: "#00889a", strokeWidth: 2 }} />
+        </button>
+      </Link>
+      
+      <Link to="/calendar">
+        <button>
+          <img src={Calendar} className="" alt="calendar icon" />
+        </button>
+      </Link>
+      
+      <Link to="/certificate">
+      <button>
+        <Notebook 
+          style={{ 
+            color: "var(--primary-color)", 
+            width: "32px", 
+            height: "32px", 
+            "--stroke-width": "4px"  // ✅ Adjust stroke width dynamically
+          }} 
+        />
+        </button>
+      </Link>
+
+      <Link to="/schedule">
+        <button>  
+          <Book 
+            style={{ 
+              color: "var(--primary-color)", 
+              width: "32px", 
+              height: "32px", 
+              '--stroke-width': '4px' // Set the stroke width here
+            }} 
+          />
+        </button>
+      </Link>
     </div> {/* sidebar-buttons */}
   </div>
   );

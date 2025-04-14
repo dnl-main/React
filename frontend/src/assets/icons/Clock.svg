@@ -1,0 +1,17 @@
+<svg 
+  class="customizable-clock" 
+  width="80" 
+  height="80" 
+  viewBox="0 0 80 80" 
+  fill="var(--fill-color, none)" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path 
+    class="svg-path" 
+    d="M40 23.3333V40H56.6667M40 70C23.4315 70 10 56.5685 10 40C10 23.4315 23.4315 10 40 10C56.5685 10 70 23.4315 70 40C70 56.5685 56.5685 70 40 70Z" 
+    stroke="var(--stroke-color, #14181F)" 
+    stroke-width="var(--stroke-width, 4)" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+</svg>

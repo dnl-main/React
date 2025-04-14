@@ -1,95 +1,166 @@
 import React from 'react';
 import './homeUser.css';
 
+import { Navbar } from '../../admin/navbar/Navbar';
+import Sidebar from '../../admin/sidebar/Sidebar';
+import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
+import Clock from '../../assets/icons/Clock.svg?react';
+
+
 const HomeUser = () => {
   return (
-    <div className="container">
-      <div className="header">
-        <div className="home-icon">
-        <i className="fa-solid fa-house"></i>
-        <span>Home</span></div>
-        <div className="status-indicator">
-        <i className="fa-solid fa-circle-check"></i>
-        <span className="status-text">Available</span>
-        <i className="fa-solid fa-angle-down"></i>
-        </div></div>
+  <div className="homeUser">
+    <Navbar />
+    <Sidebar />
+    <div className="homeUser-box">
+    <main className="homeUser-box-in">
+      <div className="homeUser-top">
+        <div className="homeUser-top-header">
+          <div className="homeUser-top-header-left">
+            <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+            <header>Home</header>
+          </div> {/* homeUser-top-header-left */}
 
-        <div className="main-content">
-  <div className="scheduled-certificate-wrapper">
-    {/* Scheduled Appointment Section */}
-    <div className="card scheduled-appointment">
-      <h3>You have an appointment</h3>
-      <div className="appointment-details">
-        <i className="fa-solid fa-calendar-days"></i>
-        <div>
-          <p className="date">December 28, 2024</p>
-          <p className="time">Starts at: 12:30 PM</p>
-          <p className="time">Ends at: 1:00 PM</p>
-        </div>
-      </div>
-      <button className="set-appointment">Set Appointment</button>
-    </div>
+          <div className="homeUser-top-header-right">
+            <div className="homeUser-top-header-right-status">
+              <main className="homeUser-top-header-right-status-in">
+                <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+                <p>Available</p>
+              </main> {/* homeUser-top-header-right-status-in */}
+            </div> {/* homeUser-top-header-right-status */}
 
-    {/* Certificate Upload Section */}
-    <div className="card certificate-upload">
-      <h3>Certificate Upload</h3>
-      <p>Your progress: <strong>75% complete</strong></p>
-      <div className="progress-bar">
-        <div className="progress" style={{ width: "75%" }}></div>
-      </div>
+            <button className="homeUser-top-header-right-btn">
+              <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+            </button> {/* homeUser-top-header-right-btn */}
+          </div> {/* homeUser-top-header-right */}
+        </div> {/* homeUser-top-header */}
+        
+        <div className="homeUser-top-core">
+          <div className="homeUser-top-core-left">
 
-      <div className="file-upload">
-        <label htmlFor="certificate-type">Select the type of certificate:</label>
-        <select id="certificate-type">
-          <option value="medical">Medical</option>
-        </select>
-        <div className="file-input">
-          <label htmlFor="file-upload">
-            <i className="fa-solid fa-upload"></i> Choose a file to upload
-          </label>
-          <input
-            type="file"
-            id="file-upload"
-            accept=".jpeg, .png, .pdf"
-          />
-        </div>
-      </div>
-    </div>
+            <div className="homeUser-top-core-left-header">
+              <header>Scheduled appointment</header>
+              <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+            </div> {/* homeUser-top-core-left-header */}
+
+            <div className="homeUser-top-core-left-heading">
+              <p>You have an apppointment</p>
+            </div> {/* homeUser-top-core-left-heading */}
+
+            <div className="homeUser-top-core-left-date">
+              <div className="homeUser-top-core-left-date-cal">
+                <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+                <p>DEC</p>
+                <p>28</p>
+              </div> {/* homeUser-top-core-left-date-cal */}
+
+              <div className="homeUser-top-core-left-date-data">
+                <div className="homeUser-top-core-left-date-data-text">
+                  <p className="homeUser-top-core-left-date-data-text-regular">December 28, 2025</p>
+                  <p className="homeUser-top-core-left-date-data-text-light">Thursday</p>
+                </div> {/* homeUser-top-core-left-date-data-text */}
+
+                <div className="homeUser-top-core-left-date-data-cards">
+
+
+                  <div  className="homeUser-top-core-left-date-data-cards-start">
+                    <Clock style={{ 
+                      width: "24px", 
+                      height: "24px", 
+                      '--stroke-color': 'var(--black-color-opacity-30)', 
+                      '--stroke-width': '5px' 
+                    }} />
+                    <div className="homeUser-top-core-left-date-data-cards-start-text">
+                      <p className="homeUser-top-core-left-date-data-cards-start-text-light">Starts at</p>
+                      <p className="homeUser-top-core-left-date-data-cards-start-text-medium">11:30 AM</p>
+                    </div> {/* homeUser-top-core-left-date-data-cards-start-text */}
+                  </div> {/* homeUser-top-core-left-date-data-cards-start */}
+
+                  <div  className="homeUser-top-core-left-date-data-cards-end">
+                    <Clock style={{ 
+                      width: "24px", 
+                      height: "24px", 
+                      '--stroke-color': 'var(--black-color-opacity-30)', 
+                      '--stroke-width': '5px' 
+                    }} />
+                    <div className="homeUser-top-core-left-date-data-cards-end-text">
+                      <p className="homeUser-top-core-left-date-data-cards-end-text-light">Ends at</p>
+                      <p className="homeUser-top-core-left-date-data-cards-end-text-medium">12:00 PM</p>
+                    </div> {/* homeUser-top-core-left-date-data-cards-end-text */}
+                  </div> {/* homeUser-top-core-left-date-data-cards-end */}
+                </div> {/* homeUser-top-core-left-date-data-cards */}
+              </div> {/* homeUser-top-core-left-date-data */}
+            </div> {/* homeUser-top-core-left-date */}
+
+            <button className="homeUser-top-core-left-btn">
+              <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+              <p>Set appointment</p>
+            </button> {/* homeUser-top-core-left-btn */}
+          </div> {/* homeUser-top-core-left */}
+
+
+          <div className="homeUser-top-core-right">
+
+            <div className="homeUser-top-core-right-header">
+              <header>Certificate upload</header>
+              <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+            </div> {/* homeUser-top-core-right-header */}
+
+            <div className="homeUser-top-core-right-progress">
+              <div className="homeUser-top-core-right-progress-text">
+                <p>Your progress</p>
+                <div className="homeUser-top-core-right-progress-text-box">
+                  <p className="homeUser-top-core-right-progress-text-box-regular">75% complete</p>
+                  <p className="homeUser-top-core-right-progress-text-box-light">3 out of 4 uploaded</p>
+                </div> {/* homeUser-top-core-right-progress-text-box */}
+              </div> {/* homeUser-top-core-right-progress-text */}
+
+              <div className="homeUser-top-core-right-progress-bar">
+                <div className="homeUser-top-core-right-progress-bar-primary">
+                  NEED COLOR
+                </div> {/* homeUser-top-core-right-progress-bar-primary */}
+              </div> {/* homeUser-top-core-right-progress-bar */}
+            </div> {/* homeUser-top-core-right-progress */}
+
+            <div className="homeUser-top-core-right-up">
+              <div className="homeUser-top-core-right-up-desc">
+                <div className="homeUser-top-core-right-up-desc-header">
+                  <p>File upload</p>
+                  <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+                </div> {/* homeUser-top-core-right-up-desc-header */}
+                <p className="homeUser-top-core-right-up-desc-light">Select the type of certificate</p>
+              </div> {/* homeUser-top-core-right-up-desc */}
+
+              <button className="homeUser-top-core-right-up-btn">
+                <div className="homeUser-top-core-right-up-btn-header">
+                  <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+                  <p>Medical</p>
+                </div> {/* homeUser-top-core-right-up-btn-header */}
+                <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+              </button> {/* homeUser-top-core-right-up-btn */}
+            </div> {/* homeUser-top-core-right-up */}
+
+            <div className="homeUser-top-core-right-down">
+              <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+              <div className="homeUser-top-core-right-down-text">
+                <p className="homeUser-top-core-right-down-text-bold">Choose a file to upload</p>
+                <p className="homeUser-top-core-right-down-text-light">JPEG, PNG, and PDF formats, up to 50 MB</p>
+              </div> {/* homeUser-top-core-right-down-text */}
+
+              <button className="homeUser-top-core-right-down-btn">
+                <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+                <p>Browse files</p>
+              </button> {/* homeUser-top-core-right-down-btn */}
+            </div> {/* homeUser-top-core-right-down */}
+          </div> {/* homeUser-top-core-right */}
+        </div> {/* homeUser-top-core */}
+      </div> {/* homeUser-top */}
+
+      <div className="homeUser-bot">
+      </div> {/* homeUser-bot */}
+    </main> {/* homeUser-box-in */}
+    </div> {/* homeUser-box */}
   </div>
-</div>
-
-      
-      <div className="notifications">
-      <h3 style={{ display: "flex", alignItems: "center", gap: "10px", color: "#444" }}>
-        <i className="fa-solid fa-bell" style={{ color: "#00899A" }}></i>
-        Notifications
-      </h3>
-
-      <div className="notification-item">
-      <div className="profile-icon"></div>
-      <div className="details">
-      <p><strong>John Doe</strong> - Fleet Crew Manager</p>
-      <p className="subtext">You have an appointment with John Doe</p>
-      <div className="date-time">
-      <div className="date-card">
-      <p className="date">
-        <i className="fa-solid fa-calendar-days"></i> Monday, Dec 28, 2024</p>
-        </div>
-        <div className="start-time-card">
-      <p className="time">
-      <i className="fa-solid fa-clock"></i> Starts at: 11:30 AM</p>
-        </div>
-        <div className="end-time-card">
-      <p className="time">
-        <i className="fa-solid fa-clock"></i> Ends at: 12:00 PM</p>
-        </div>
-        </div>
-        </div>
-        <button className="new-appointment">New Appointment</button>
-        <i className="fas fa-check-circle check-icon"></i>
-      </div>
-      </div>
-      </div>
   );
 };
 

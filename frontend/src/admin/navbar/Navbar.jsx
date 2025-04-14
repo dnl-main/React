@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 
 import Search from '../../assets/icons/Search.svg';
@@ -31,26 +31,30 @@ export const Navbar = () => {
         </div> {/* navbar-main-search */}
 
         <div className="navbar-main-notification">
-          <Bell 
-            style={{ 
-              color: "var(--primary-color)", 
-              width: "32px", 
-              height: "32px", 
-              "--stroke-width": "5px"  // ✅ This works!
-            }} 
-          />
+          <Link to="/notification">
+            
+              <Bell 
+                style={{ 
+                  color: "var(--primary-color)", 
+                  width: "32px", 
+                  height: "32px", 
+                  "--stroke-width": "5px"  // ✅ This works!
+                }} 
+              />
+          </Link>
         </div> {/* navbar-main-notification */}
 
         <div className="navbar-main-account">
-          
-        <User_Circle 
-          style={{ 
-            color: "var(--primary-color)", 
-            width: "32px", 
-            height: "32px", 
-            "--stroke-width": "5px"  // ✅ Adjust stroke width dynamically
-          }} 
-        />
+          <Link to="/account"> 
+            <User_Circle 
+              style={{ 
+                color: "var(--primary-color)", 
+                width: "32px", 
+                height: "32px", 
+                "--stroke-width": "5px"  // ✅ Adjust stroke width dynamically
+              }} 
+            />
+          </Link>
         </div> {/* navbar-main-account */}
       </main> {/* navbar-main */}
     </nav>

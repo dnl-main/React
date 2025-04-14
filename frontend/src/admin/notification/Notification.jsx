@@ -8,6 +8,7 @@ import NotificationCard from './notificationComponent/NotificationCard';
 import Calendar_Event from '../../assets/icons/Calendar_Event.svg?react';
 import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
 import Edit_Pencil_01 from '../../assets/icons/Edit_Pencil_01.svg?react';
+import Bell from '../../assets/icons/Bell.svg?react';
 
 const Notification = () => {
   return (
@@ -17,12 +18,12 @@ const Notification = () => {
     <div className="notification-box">
       <main className="notification-box-in">
         <header className="notification-header">
-          <Calendar_Event 
+          <Bell 
             style={{ 
               color: "var(--black-color)", 
               width: "32px", 
               height: "32px", 
-              "--stroke-width": "4px" 
+              "--stroke-width": "5px"  
             }} 
           />
           <p>Notifications</p> 
