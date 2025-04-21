@@ -3,6 +3,9 @@ import './homeUser.css';
 
 import { Navbar } from '../../admin/navbar/Navbar';
 import Sidebar from '../../admin/sidebar/Sidebar';
+
+import SidebarUser from '../sidebar/SidebarUser';
+import NavbarUser from '../navbar/NavbarUser';
 import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
 import Clock from '../../assets/icons/Clock.svg?react';
 
@@ -10,8 +13,8 @@ import Clock from '../../assets/icons/Clock.svg?react';
 const HomeUser = () => {
   return (
   <div className="homeUser">
-    <Navbar />
-    <Sidebar />
+    <NavbarUser />
+    <SidebarUser />
     <div className="homeUser-box">
     <main className="homeUser-box-in">
       <div className="homeUser-top">

@@ -1,0 +1,65 @@
+.sidebarUser {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	height: 100vh;
+	width: 72px;
+	background-color: var(--primary-color);
+	row-gap: clamp(80px, 20vh, 120px);
+	
+}
+	.sidebarUser button {
+		all: unset;
+	}
+	.sidebarUser-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 72px;
+		width: 100%;
+		/* background-color: RED; */
+	}
+		.sidebarUser-logo button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 56px;
+			width: 56px;
+			background-color: var(--white-color);
+			border-radius: 100px;
+		}
+			.sidebarUser-logo img {
+				height: 40px;
+				width: auto;
+			}
+	.sidebarUser-buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		flex-grow: 1;
+		height: 40vh;
+		width: 100%;
+		/* background-color: lightpink; */
+		row-gap: clamp(12px, 2vh, 28px);
+
+	}
+		.sidebarUser-buttons button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 56px;
+			width: 56px;
+			background-color: var(--white-color);
+			box-shadow: 0 0 8px var(--secondary-color-opacity-45);
+			border-radius: 100px;
+		}
+			.sidebarUser-buttons img {
+				height: 32px;
+				width: auto;
+			}

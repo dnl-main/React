@@ -1,0 +1,105 @@
+.navbarUser {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 72px;
+	width: 100vw;
+	background-color: var(--secondary-color);
+	padding-left: clamp(120px, 50%, 120px);
+	padding-right: 80px;
+	box-shadow: 0px 4px 48px var(--primary-color-opacity-15);
+}
+	.navbarUser-header {
+		display: flex;
+		flex-direction: row;
+		justify-items: center;
+		align-items: center;
+	}
+		.navbarUser-header p {
+			font-family: var(--font-accent);
+			font-weight: var(--font-weight-semibold);
+			font-size: var(--font-size-24);
+			color: var(--primary-color);
+		}
+	.navbarUser-main {
+		display: flex;
+		flex-direction: row;
+		justify-content: end;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		gap: clamp(10px, 32px, 60px);
+	}
+		.navbarUser-main-search {
+			display: flex;
+			flex-direction: row;
+			height: 70%;
+			width: 40%;
+			background-color: var(--primary-color-opacity-10);
+			border-radius: 12px;
+		}
+			.navbarUser-main-search-left {
+				display: flex;
+				flex-direction: row;
+				justify-content: start;
+				align-items: center;
+				height: 100%;
+				width: 88%;
+				column-gap: clamp(12px, 20px, 40px);
+				padding-left: 8px;
+			}
+				.navbarUser-main-search-left img {
+					height: 32px;
+					width: auto;
+				}
+				.navbarUser-main-search-left p {
+					font-weight: var(--font-weight-light);
+					font-size: var(--font-size-20);
+					color: var(--primary-color);
+				}
+			.navbarUser-main-search-right {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				width: 12%;
+			}
+
+				.navbarUser-main-search-right-bg {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 72%;
+					width: 72%;
+					background-color: var(--primary-color);
+					border-radius: 8px;
+				}
+					.navbarUser-main-search-right-bg img{
+						height: 80%;
+						width: 80%;
+					}
+
+		.navbarUser-main-notification {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 70%;
+			width: 4.5%;
+			background-color: var(--white-color);
+			border-radius: 100px;
+		}
+
+		.navbarUser-main-account {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 70%;
+			width: 4.5%;
+			background-color: var(--white-color);
+			border-radius: 100px;
+		}
