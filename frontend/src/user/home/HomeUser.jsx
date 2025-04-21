@@ -1,9 +1,6 @@
 import React from 'react';
 import './homeUser.css';
 
-import { Navbar } from '../../admin/navbar/Navbar';
-import Sidebar from '../../admin/sidebar/Sidebar';
-
 import SidebarUser from '../sidebar/SidebarUser';
 import NavbarUser from '../navbar/NavbarUser';
 import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
@@ -40,7 +37,6 @@ const HomeUser = () => {
         
         <div className="homeUser-top-core">
           <div className="homeUser-top-core-left">
-
             <div className="homeUser-top-core-left-header">
               <header>Scheduled appointment</header>
               <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
@@ -52,9 +48,10 @@ const HomeUser = () => {
 
             <div className="homeUser-top-core-left-date">
               <div className="homeUser-top-core-left-date-cal">
-                <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
-                <p>DEC</p>
-                <p>28</p>
+                {/* needs absolute positioning */}
+                {/* <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} /> */}
+                <p className="homeUser-top-core-left-date-cal-regular">DEC</p>
+                <p className="homeUser-top-core-left-date-cal-semibold">28</p>
               </div> {/* homeUser-top-core-left-date-cal */}
 
               <div className="homeUser-top-core-left-date-data">
@@ -64,8 +61,6 @@ const HomeUser = () => {
                 </div> {/* homeUser-top-core-left-date-data-text */}
 
                 <div className="homeUser-top-core-left-date-data-cards">
-
-
                   <div  className="homeUser-top-core-left-date-data-cards-start">
                     <Clock style={{ 
                       width: "24px", 
@@ -95,15 +90,15 @@ const HomeUser = () => {
               </div> {/* homeUser-top-core-left-date-data */}
             </div> {/* homeUser-top-core-left-date */}
 
-            <button className="homeUser-top-core-left-btn">
-              <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
-              <p>Set appointment</p>
-            </button> {/* homeUser-top-core-left-btn */}
+            <div className="homeUser-top-core-left-btn">
+              <button className="homeUser-top-core-left-btn-button">
+                <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+                <p>Set appointment</p>
+              </button>
+            </div> {/* homeUser-top-core-left-btn */}
           </div> {/* homeUser-top-core-left */}
 
-
           <div className="homeUser-top-core-right">
-
             <div className="homeUser-top-core-right-header">
               <header>Certificate upload</header>
               <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
@@ -111,7 +106,7 @@ const HomeUser = () => {
 
             <div className="homeUser-top-core-right-progress">
               <div className="homeUser-top-core-right-progress-text">
-                <p>Your progress</p>
+                <p className="homeUser-top-core-right-progress-text-light">Your progress</p>
                 <div className="homeUser-top-core-right-progress-text-box">
                   <p className="homeUser-top-core-right-progress-text-box-regular">75% complete</p>
                   <p className="homeUser-top-core-right-progress-text-box-light">3 out of 4 uploaded</p>
@@ -120,7 +115,7 @@ const HomeUser = () => {
 
               <div className="homeUser-top-core-right-progress-bar">
                 <div className="homeUser-top-core-right-progress-bar-primary">
-                  NEED COLOR
+                  
                 </div> {/* homeUser-top-core-right-progress-bar-primary */}
               </div> {/* homeUser-top-core-right-progress-bar */}
             </div> {/* homeUser-top-core-right-progress */}
