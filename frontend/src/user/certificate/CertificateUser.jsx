@@ -1,74 +1,50 @@
 import React from 'react';
 import './certificateUser.css';
 
+import SidebarUser from '../sidebar/SidebarUser';
+import NavbarUser from '../navbar/NavbarUser';
+
+import CertificateUserCard from './certificateCard/CertificateUserCard';
+
+import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
+
 const CertificateUser = () => {
   return (
-    <div className="container">
-      <h1>Certificate</h1>
+    <div className="certificateUser">
+      <NavbarUser />
+      <SidebarUser />
+    <div className="certificateUser-box">
+    <main className="certificateUser-box-in">
+    
+      <div className="certificateUser-top">
+        <div className="certificateUser-top-header">
+          <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+          <header>Certificate</header>
+        </div> {/* certificateUser-top-header */}
 
-      <div className="certificates">
-        
-        <div className="certificate-card">
-          <h3>Medical Certificate</h3>
-          <label htmlFor="expiration-date-1">Expiration Date</label>
-          <input type="date" id="expiration-date-1" />
-          <label htmlFor="file-upload-1">Choose a file to upload</label>
-          <input type="file" id="file-upload-1" accept=".jpg, .jpeg, .png, .pdf" />
-          <button>Browse Files</button>
-        </div>
+        <div className="certificateUser-top-core">
+          <p className="certificateUser-top-core-medium">List of certificates</p>
+          <div className="certificateUser-top-core-cards">
+            <CertificateUserCard />
+            <CertificateUserCard />
+            <CertificateUserCard />
+            <CertificateUserCard />
+          </div> {/* certificateUser-top-core-cards */}
+        </div> {/* certificateUser-top-core */}
 
-        <div className="certificate-card">
-          <h3>Medical Certificate</h3>
-          <label htmlFor="expiration-date-2">Expiration Date</label>
-          <input type="date" id="expiration-date-2" />
-          <label htmlFor="file-upload-2">Choose a file to upload</label>
-          <input type="file" id="file-upload-2" accept=".jpg, .jpeg, .png, .pdf" />
-          <button>Replace Files</button>
-        </div>
+        <div className="certificateUser-top-btn">
+          <button className="certificateUser-top-btn-button">
+            <Circle_Primary style={{ color: "var(--black-color-opacity-60)", width: "20px", height: "20px" }} />
+            <p>Upload More</p>
+          </button> {/* certificateUser-top-btn-button */}
+        </div> {/* certificateUser-top-btn */}
+      </div> {/* certificateUser-top */}
 
-        <div className="certificate-card">
-          <h3>Medical Certificate</h3>
-          <label htmlFor="expiration-date-3">Expiration Date</label>
-          <input type="date" id="expiration-date-3" />
-          <label htmlFor="file-upload-3">Choose a file to upload</label>
-          <input type="file" id="file-upload-3" accept=".jpg, .jpeg, .png, .pdf" />
-          <button>Browse Files</button>
-        </div>
-
-        <div className="certificate-card">
-          <h3>Medical Certificate</h3>
-          <label htmlFor="expiration-date-4">Expiration Date</label>
-          <input type="date" id="expiration-date-4" />
-          <label htmlFor="file-upload-4">Choose a file to upload</label>
-          <input type="file" id="file-upload-4" accept=".jpg, .jpeg, .png, .pdf" />
-          <button>Browse Files</button>
-        </div>
-      </div>
-
-      <div className="upload-more">
-        <button>+ Upload More</button>
-      </div>
-
-      <h2>Uploaded Certificates</h2>
-
-      <div className="uploaded-certificates">
-        <div className="certificate">
-          <div className="certificate-info">
-            <p><strong>Medical Certificate</strong></p>
-            <div className="date-expiration-container">
-              <div className="date-card">
-                <p><strong>Uploaded at:</strong> December 23, 2024</p>
-              </div>
-              <div className="expiration-card">
-                <p><strong>Expires at:</strong> January 28, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="status">
-            <span>Approved</span>
-          </div>
-        </div>
-      </div>
+      <div className="certificateUser-bot">
+        <p>bot</p>
+      </div> {/* certificateUser-bot */}
+    </main> {/* certificateUser-box-in */}
+    </div> {/* certificateUser-box */}
     </div>
   );
 };
