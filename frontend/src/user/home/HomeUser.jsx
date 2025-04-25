@@ -3,8 +3,12 @@ import './homeUser.css';
 
 import SidebarUser from '../sidebar/SidebarUser';
 import NavbarUser from '../navbar/NavbarUser';
+
+import NotificationUserCard from '../notification/notificationComponents/NotificationUserCard';
+
 import Circle_Primary from '../../assets/icons/Circle_Primary.svg?react';
 import Clock from '../../assets/icons/Clock.svg?react';
+import Calendar_Week from '../../assets/icons/Calendar_Week.svg?react';
 
 
 const HomeUser = () => {
@@ -154,8 +158,31 @@ const HomeUser = () => {
         </div> {/* homeUser-top-core */}
       </div> {/* homeUser-top */}
 
+
+
+
+
       <div className="homeUser-bot">
-      </div> {/* homeUser-bot */}
+        <header className="homeUser-bot-header">
+          <Calendar_Week style={{  
+            width: "24px", 
+            height: "24px", 
+            '--stroke-width': '2px',
+            '--stroke-color': 'var(--black-color)'
+          }} />
+          <p>Notifications</p>
+        </header> {/* homeUser-bot-header */}
+
+        <div className="homeUser-bot-cards">
+          <NotificationUserCard />
+          <NotificationUserCard />
+          <NotificationUserCard />
+
+        </div> {/* homeUser-bot-cards */}
+    </div> {/* homeUser-bot */}
+
+
+
     </main> {/* homeUser-box-in */}
     </div> {/* homeUser-box */}
   </div>
